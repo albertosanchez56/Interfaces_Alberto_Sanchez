@@ -18,9 +18,9 @@ public class MenuController {
 
     }
 
-	public void setRootLayout(BorderPane rootLayout) {
-		this.rootLayout = rootLayout;
-	}
+	/*public void setRootLayout(BorderPane rootLayout) {
+		
+	}*/
 
 }
 
