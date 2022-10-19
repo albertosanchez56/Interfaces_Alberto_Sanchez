@@ -27,7 +27,7 @@ public class MenuController {
     	try {
 			// Cargamos el archivo Controles Dinámicos
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(MenuController.class.getResource("/mostarDatos/mostrarDatos.fxml"));
+			loader.setLocation(MenuController.class.getResource("/mostrarDatos/mostrarDatos.fxml"));
 			TabPane listadoControles = (TabPane) loader.load();
 
 			// Se sitúa en el centro del diseño principal
