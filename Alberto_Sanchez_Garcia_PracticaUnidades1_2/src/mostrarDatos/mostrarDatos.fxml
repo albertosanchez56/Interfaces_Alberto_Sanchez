@@ -31,7 +31,7 @@
                   </AnchorPane>
                   <AnchorPane prefHeight="621.0" prefWidth="521.0">
                      <children>
-                        <GridPane layoutY="15.0" prefHeight="604.0" prefWidth="420.0">
+                        <GridPane layoutY="15.0" prefHeight="581.0" prefWidth="420.0">
                           <columnConstraints>
                             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
