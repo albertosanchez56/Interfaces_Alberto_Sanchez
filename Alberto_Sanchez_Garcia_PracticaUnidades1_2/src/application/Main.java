@@ -26,6 +26,8 @@ public class Main extends Application {
 				// Mostramos la escena del BorderPane de la variable rootLayot
 				Scene scene = new Scene(rootLayout);
 				primaryStage.setScene(scene);
+				primaryStage.setResizable(false);
+				primaryStage.setMaximized(true);
 				primaryStage.setTitle("Practica tema1_2");
 				primaryStage.show();
 			} catch (Exception e) {
