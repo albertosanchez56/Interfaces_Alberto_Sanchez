@@ -34,9 +34,7 @@ public class MenuController {
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(MenuController.class.getResource("/mostrarDatos/mostrarDatos.fxml"));
 			TabPane listadoControles = (TabPane) loader.load();
-			rootLayout = (BorderPane) loader.load();
-			MenuController menuController = loader.getController();
-			menuController.setRootLayout(rootLayout);
+		
 
 			// Se sitúa en el centro del diseño principal
 			rootLayout.setCenter(listadoControles);
