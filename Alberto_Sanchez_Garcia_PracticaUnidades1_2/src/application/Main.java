@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
+import javafx.scene.control.MenuBar;
 import javafx.scene.layout.BorderPane;
 
 
@@ -12,7 +13,7 @@ public class Main extends Application {
 		private BorderPane rootLayout;	
 		
 		@Override
-		public void start(Stage primaryStage) {
+		public void start(Stage primaryStage ) {
 			try {
 				// Carga el diseño del archivo FXML en la variable rootLayout
 				FXMLLoader loader = new FXMLLoader();
@@ -27,7 +28,9 @@ public class Main extends Application {
 				Scene scene = new Scene(rootLayout);
 				primaryStage.setScene(scene);
 				primaryStage.setResizable(false);
-				primaryStage.setMaximized(true);
+				
+				
+				//primaryStage.setMaximized(true);
 				primaryStage.setTitle("Practica tema1_2");
 				primaryStage.show();
 			} catch (Exception e) {
