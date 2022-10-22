@@ -19,7 +19,7 @@ public class Main extends Application {
 				FXMLLoader loader = new FXMLLoader();
 				loader.setLocation(Main.class.getResource("Menu.fxml"));
 				rootLayout = (BorderPane) loader.load();
-				
+				rootLayout.getStylesheets().add(getClass().getResource("/application/application.css").toExternalForm());
 				// Pasamos al controlador de menu el objeto con el BorderPane principal
 				MenuController menuController = loader.getController();
 				menuController.setRootLayout(rootLayout);
