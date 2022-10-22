@@ -3,9 +3,10 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -16,7 +17,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="750.0" style="-fx-background-color: #606060;" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="750.0" style="-fx-background-color: #606060;" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mostrarDatos.DatosController">
   <tabs>
     <Tab text="Empleados">
          <content>
@@ -24,9 +25,14 @@
                <children>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="621.0" prefWidth="314.0">
                      <children>
-                        <ListView layoutX="9.0" layoutY="77.0" prefHeight="400.0" prefWidth="254.0" />
                         <TextField layoutX="9.0" layoutY="52.0" prefHeight="25.0" prefWidth="187.0" />
                         <Button layoutX="196.0" layoutY="52.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" text="Buscar" />
+                        <TableView fx:id="listaNombresEmpleados" layoutX="3.0" layoutY="103.0" prefHeight="402.0" prefWidth="267.0">
+                          <columns>
+                            <TableColumn editable="false" prefWidth="129.0" text="Nombre" />
+                            <TableColumn prefWidth="151.0" text="Apellido" />
+                          </columns>
+                        </TableView>
                      </children>
                   </AnchorPane>
                   <AnchorPane prefHeight="621.0" prefWidth="521.0">
