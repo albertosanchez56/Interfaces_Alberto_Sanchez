@@ -24,54 +24,57 @@ public class Productos {
 		}
 
 
-		public SimpleStringProperty getFirstName() {
-			return firstName;
+		public String getFirstName() {
+			return firstName.get();
 		}
 
 
-		public void setFirstName(SimpleStringProperty firstName) {
-			this.firstName = firstName;
+		public void setFirstName(String fName) {
+			 firstName.set(fName);
 		}
 
 
-		public SimpleStringProperty getTipo() {
-			return tipo;
+		public String getTipo() {
+			return tipo.get();
 		}
 
 
-		public void setTipo(SimpleStringProperty tipo) {
-			this.tipo = tipo;
+		public void setTipo(String stipo) {
+			tipo.set(stipo);;
 		}
 
 
-		public SimpleDoubleProperty getPrecio() {
-			return precio;
+		public Double getPrecio() {
+			return precio.get();
 		}
 
 
-		public void setPrecio(SimpleDoubleProperty precio) {
-			this.precio = precio;
+		public void setPrecio(Double dprecio) {
+			precio.set(dprecio);
 		}
 
 
-		public SimpleStringProperty getProcedencia() {
-			return procedencia;
+		public String getProcedencia() {
+			return procedencia.get();
 		}
 
 
-		public void setProcedencia(SimpleStringProperty procedencia) {
-			this.procedencia = procedencia;
+		public void setProcedencia(String sprocedencia) {
+			procedencia.set(sprocedencia);;
 		}
 
 
-		public SimpleStringProperty getCodigo() {
-			return codigo;
+		public String getCodigo() {
+			return codigo.get();
 		}
 
 
-		public void setCodigo(SimpleStringProperty codigo) {
-			this.codigo = codigo;
+		public void setCodigo(String scodigo) {
+			codigo.set(scodigo);;
 		}
+
+
+		
 
 
 	

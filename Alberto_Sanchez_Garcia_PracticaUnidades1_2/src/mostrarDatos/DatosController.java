@@ -60,7 +60,7 @@ public class DatosController {
     		 firstNameCol.setCellValueFactory(new PropertyValueFactory<Persona,String>("firstName"));
              lastNameCol.setCellValueFactory(new PropertyValueFactory<Persona,String>("lastName"));
              
-             nombreProduc.setCellValueFactory(new PropertyValueFactory<Productos,String>("nombreProduc"));
+             nombreProduc.setCellValueFactory(new PropertyValueFactory<Productos,String>("firstName"));
         	
         	
         	listaNombresEmpleados.setItems(data);

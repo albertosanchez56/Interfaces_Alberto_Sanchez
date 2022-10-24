@@ -42,12 +42,38 @@ public class MenuController {
 			e.printStackTrace();
 		}
     }
+    
+    @FXML
+    void abrirFormularioEditar(ActionEvent event) {
+    	try {
+			// Cargamos el archivo Controles Dinámicos
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(MenuController.class.getResource("/EditarDatos/EditarDatos.fxml"));
+			TabPane listadoControles = (TabPane) loader.load();
+		
+
+			// Se sitúa en el centro del diseño principal
+			rootLayout.setCenter(listadoControles);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+    }
+    
+    
+
     @FXML
     void iniciarSesion(ActionEvent event) {
     	rootLayout.setCenter(null);
     	menu.setVisible(true);
     }
-    
+    @FXML
+    void cerrarFormulario(ActionEvent event) {
+    	rootLayout.setCenter(null);	
+    }
+    @FXML
+    void cerrarFormularioEditar(ActionEvent event) {
+    	rootLayout.setCenter(null);
+    }
 
 	public BorderPane getRootLayout() {
 		return rootLayout;
