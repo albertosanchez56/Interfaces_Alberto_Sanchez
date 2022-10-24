@@ -257,8 +257,8 @@
                                                          </opaqueInsets>
                                                       </TextField>
                                                       <ChoiceBox prefHeight="25.0" prefWidth="245.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                                      <Slider GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                                      <ComboBox prefHeight="25.0" prefWidth="243.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <Slider max="1000.0" showTickLabels="true" showTickMarks="true" style="-fx-background-color: #FFFFFF;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                      <ComboBox fx:id="tipoCombo" prefHeight="25.0" prefWidth="243.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                                    </children>
                                                    <opaqueInsets>
                                                       <Insets right="10.0" />
