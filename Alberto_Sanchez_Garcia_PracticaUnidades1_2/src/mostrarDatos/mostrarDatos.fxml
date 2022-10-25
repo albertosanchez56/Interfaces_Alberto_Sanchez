@@ -31,6 +31,9 @@
                           <columns>
                             <TableColumn fx:id="firstNameCol" editable="false" prefWidth="129.0" text="Nombre" />
                             <TableColumn fx:id="lastNameCol" prefWidth="151.0" text="Apellido" />
+                              <TableColumn fx:id="telefonoCol" prefWidth="75.0" text="Telefono" />
+                              <TableColumn fx:id="direccionCol" prefWidth="75.0" text="Direccion" />
+                              <TableColumn fx:id="emailCol" prefWidth="75.0" text="Email" />
                           </columns>
                         </TableView>
                      </children>
@@ -143,6 +146,10 @@
                         <TableView fx:id="listaNombresProducto" layoutX="3.0" layoutY="103.0" prefHeight="402.0" prefWidth="267.0">
                            <columns>
                               <TableColumn fx:id="nombreProduc" editable="false" prefWidth="266.0" text="Nombre del producto" />
+                              <TableColumn fx:id="tipoCol" prefWidth="75.0" text="Tipo" />
+                              <TableColumn fx:id="precioCol" prefWidth="75.0" text="Precio" />
+                              <TableColumn fx:id="procedenciaCol" prefWidth="75.0" text="Procedencia" />
+                              <TableColumn fx:id="codigoCol" prefWidth="75.0" text="Codigo" />
                            </columns>
                         </TableView>
                      </children>

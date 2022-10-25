@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.PasswordField?>
@@ -125,7 +126,7 @@
                                                             <Insets left="20.0" />
                                                          </GridPane.margin>
                                                       </Text>
-                                                      <ComboBox prefHeight="25.0" prefWidth="236.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                      <ComboBox fx:id="puestoCombo" prefHeight="25.0" prefWidth="236.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                                                       <PasswordField text="1234141414" GridPane.columnIndex="1" GridPane.rowIndex="7" />
                                                       <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="añadir" GridPane.columnIndex="1" GridPane.rowIndex="9">
                                                          <GridPane.margin>
@@ -185,6 +186,9 @@
                                                    <columns>
                                                       <TableColumn fx:id="firstNameCol" editable="false" prefWidth="129.0" text="Nombre" />
                                                       <TableColumn fx:id="lastNameCol" prefWidth="151.0" text="Apellido" />
+                                                      <TableColumn fx:id="telefonoCol" prefWidth="75.0" text="Telefono" />
+                                                      <TableColumn fx:id="direccionCol" prefWidth="75.0" text="Direccion" />
+                                                      <TableColumn fx:id="emailCol" prefWidth="75.0" text="Email" />
                                                    </columns>
                                                 </TableView>
                                              </children>
@@ -335,6 +339,7 @@
                                                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                                    </rowConstraints>
                                                    <children>
                                                       <Label prefHeight="20.0" prefWidth="161.0" text="Nombre del Producto" textFill="WHITE">
@@ -361,7 +366,7 @@
                                                             <Insets left="10.0" />
                                                          </padding>
                                                       </Label>
-                                                      <Label layoutX="10.0" layoutY="365.0" prefHeight="17.0" prefWidth="101.0" text="Procedencia" textFill="WHITE" GridPane.rowIndex="3">
+                                                      <Label layoutX="10.0" layoutY="365.0" prefHeight="17.0" prefWidth="101.0" text="Procedencia" textFill="WHITE" GridPane.rowIndex="4">
                                                          <font>
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
@@ -369,7 +374,7 @@
                                                             <Insets left="10.0" />
                                                          </padding>
                                                       </Label>
-                                                      <Label layoutX="10.0" layoutY="468.0" prefHeight="17.0" prefWidth="152.0" text="Codigo" textFill="WHITE" GridPane.rowIndex="4">
+                                                      <Label layoutX="10.0" layoutY="468.0" prefHeight="17.0" prefWidth="152.0" text="Codigo" textFill="WHITE" GridPane.rowIndex="5">
                                                          <font>
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
@@ -382,19 +387,28 @@
                                                             <Insets />
                                                          </opaqueInsets>
                                                       </TextField>
-                                                      <TextField layoutX="243.0" layoutY="464.0" prefHeight="25.0" prefWidth="250.0" promptText="Codigo" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                                      <TextField layoutX="243.0" layoutY="464.0" prefHeight="25.0" prefWidth="250.0" promptText="Codigo" GridPane.columnIndex="1" GridPane.rowIndex="5">
                                                          <opaqueInsets>
                                                             <Insets />
                                                          </opaqueInsets>
                                                       </TextField>
-                                                      <ChoiceBox fx:id="procedenciaCombo" prefHeight="25.0" prefWidth="245.0" style="-fx-text-fill: #404040;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                      <ChoiceBox fx:id="procedenciaCombo" prefHeight="25.0" prefWidth="245.0" style="-fx-text-fill: #404040;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                                                       <Slider max="1000.0" prefHeight="38.0" prefWidth="317.0" showTickLabels="true" showTickMarks="true" style="-fx-background-color: #FFFFFF;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                                       <ComboBox fx:id="tipoCombo" prefHeight="25.0" prefWidth="243.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                                      <Button mnemonicParsing="false" text="Añadir" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                                      <Button mnemonicParsing="false" text="Añadir" GridPane.columnIndex="1" GridPane.rowIndex="6">
                                                          <GridPane.margin>
                                                             <Insets left="200.0" />
                                                          </GridPane.margin>
                                                       </Button>
+                                                      <Label layoutX="20.0" layoutY="38.0" prefHeight="20.0" prefWidth="161.0" text="Fecha " textFill="WHITE" GridPane.rowIndex="3">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets left="10.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <DatePicker prefHeight="25.0" prefWidth="251.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                                                    </children>
                                                    <opaqueInsets>
                                                       <Insets right="10.0" />
@@ -420,6 +434,10 @@
                                                 <TableView fx:id="listaNombresProducto" layoutX="4.0" layoutY="103.0" prefHeight="402.0" prefWidth="264.0">
                                                    <columns>
                                                       <TableColumn fx:id="nombreProduc" editable="false" prefWidth="266.0" text="Nombre del producto" />
+                                                      <TableColumn fx:id="tipoCol" prefWidth="75.0" text="Tipo" />
+                                                      <TableColumn fx:id="precioCol" prefWidth="75.0" text="Precio" />
+                                                      <TableColumn fx:id="procedenciaCol" prefWidth="75.0" text="Procedencia" />
+                                                      <TableColumn fx:id="codigoCol" prefWidth="75.0" text="Codigo" />
                                                    </columns>
                                                 </TableView>
                                              </children>

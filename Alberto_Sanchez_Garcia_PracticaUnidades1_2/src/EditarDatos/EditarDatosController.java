@@ -49,14 +49,38 @@ public class EditarDatosController {
     private TableColumn<Persona, String> lastNameCol;
     
     @FXML
+    private TableColumn<Persona, Integer> telefonoCol;
+    
+    @FXML
     private TableColumn<Productos, String> nombreProduc;
     
+    @FXML
+    private TableColumn<Persona, String> direccionCol;
+
+    @FXML
+    private TableColumn<Persona, String> emailCol;
+    
+    @FXML
+    private TableColumn<Productos, String> codigoCol;
+
+    @FXML
+    private TableColumn<Productos, Double> precioCol;
+
+    @FXML
+    private TableColumn<Productos, String> procedenciaCol;
+    @FXML
+    private TableColumn<Productos, String> tipoCol;
+    
+    
+    @FXML
+    private ComboBox<Object> puestoCombo;
+    
     private ObservableList<Persona> dataEmpleados = FXCollections.observableArrayList(
-    	    new Persona("Alberto", "Sanchez" ,620141444, "", "Alberto.smith@example.com"),
-    	    new Persona("Lucia", "Garcia" ,51566115, "", "Lucia.smith@example.com"),
-    	    new Persona("Antonio", "Blas" ,51566115, "", "Antonio.smith@example.com"),
-    	    new Persona("Javier", "Escalera" ,51566115, "", "Javier.smith@example.com"),
-    	    new Persona("Miguel", "Smith" ,51566115, "", "Miguel.smith@example.com")
+    	    new Persona("Alberto", "Sanchez" ,620141444, "C/asdasdasdasdas", "Alberto.smith@example.com"),
+    	    new Persona("Lucia", "Garcia" ,51566115, "C/asdasdasdasdas", "Lucia.smith@example.com"),
+    	    new Persona("Antonio", "Blas" ,51566115, "C/asdasdasdasdas", "Antonio.smith@example.com"),
+    	    new Persona("Javier", "Escalera" ,51566115, "C/asdasdasdasdas", "Javier.smith@example.com"),
+    	    new Persona("Miguel", "Smith" ,51566115, "C/asdasdasdasdas", "Miguel.smith@example.com")
     	);
     
 
@@ -73,9 +97,16 @@ public class EditarDatosController {
     void initialize() {
     	
     	nombreProduc.setCellValueFactory(new PropertyValueFactory<Productos,String>("firstName"));
+    	tipoCol.setCellValueFactory(new PropertyValueFactory<Productos,String>("tipo"));
+    	precioCol.setCellValueFactory(new PropertyValueFactory<Productos,Double>("precio"));
+    	procedenciaCol.setCellValueFactory(new PropertyValueFactory<Productos,String>("procedencia"));
+    	codigoCol.setCellValueFactory(new PropertyValueFactory<Productos,String>("codigo"));
     	
     	firstNameCol.setCellValueFactory(new PropertyValueFactory<Persona,String>("firstName"));
         lastNameCol.setCellValueFactory(new PropertyValueFactory<Persona,String>("lastName"));
+        telefonoCol.setCellValueFactory(new PropertyValueFactory<Persona,Integer>("telefono"));
+        direccionCol.setCellValueFactory(new PropertyValueFactory<Persona,String>("direccion"));
+        emailCol.setCellValueFactory(new PropertyValueFactory<Persona,String>("email"));
     	
     	listaNombresProducto.setItems(dataPro);
     	listaNombresEmpleados.setItems(dataEmpleados);
@@ -85,6 +116,8 @@ public class EditarDatosController {
     	
     	procedenciaCombo.setItems(FXCollections.observableArrayList("España","China","Portugal"));
     	procedenciaCombo.setValue("Seleciona un pais");
+    	
+    	puestoCombo.setItems(FXCollections.observableArrayList("Encargado","Manager","Contable"));
     	
 		list1.setItems(data);
 		list1.setEditable(true);
