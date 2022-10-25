@@ -6,6 +6,7 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
@@ -14,11 +15,11 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="650.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MenuController">
+<BorderPane prefHeight="650.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MenuController">
    <top>
       <MenuBar fx:id="menu" prefHeight="20.0" prefWidth="750.0" style="-fx-background-color: #404040;" visible="false" BorderPane.alignment="CENTER">
         <menus>
-          <Menu mnemonicParsing="false" text="Datos">
+          <Menu mnemonicParsing="false" style="-fx-background-color: #404040;" text="Datos">
             <items>
               <MenuItem mnemonicParsing="false" onAction="#abrirFormulario" style="-fx-background-color: #404040;" text="Abrir" />
                   <MenuItem mnemonicParsing="false" onAction="#cerrarFormulario" style="-fx-background-color: #404040;" text="Cerrar" />
@@ -64,8 +65,8 @@
                   </Label>
                   <CheckBox mnemonicParsing="false" text="recordar contraseña" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <TextField GridPane.columnIndex="1" />
-                  <TextField layoutX="116.0" layoutY="36.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <Button mnemonicParsing="false" onAction="#iniciarSesion" text="Inicar Sesion" GridPane.rowIndex="2" />
+                  <PasswordField GridPane.columnIndex="1" GridPane.rowIndex="1" />
                </children>
             </GridPane>
             <Label layoutX="310.0" layoutY="131.0" prefHeight="40.0" prefWidth="130.0" text="Iniciar sesion">

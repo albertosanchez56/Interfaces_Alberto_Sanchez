@@ -37,22 +37,21 @@ public class DatosController {
     private TableColumn<Productos, String> nombreProduc;
 
    
-    private ObservableList<Persona> data = FXCollections.observableArrayList(
-    	    new Persona("Jacob", "Smith" ,0, "jacob.smith@example.com", ""),
-    	    new Persona("f", "Smith" ,0, "jacob.smith@example.com", ""),
-    	    new Persona("A", "Smith" ,0, "jacob.smith@example.com", ""),
-    	    new Persona("F", "Smith" ,0, "jacob.smith@example.com", ""),
-    	    new Persona("S", "Smith" ,0, "jacob.smith@example.com", "")
+    private ObservableList<Persona> dataEmpleados  = FXCollections.observableArrayList(
+    	    new Persona("Alberto", "Sanchez" ,0, "Alberto.smith@example.com", ""),
+    	    new Persona("Lucia", "Garcia" ,0, "Lucia.smith@example.com", ""),
+    	    new Persona("Antonio", "Blas" ,0, "Antonio.smith@example.com", ""),
+    	    new Persona("Javier", "Escalera" ,0, "Javier.smith@example.com", ""),
+    	    new Persona("Miguel", "Smith" ,0, "Miguel.smith@example.com", "")
     	);
     
+
     private ObservableList<Productos> dataPro = FXCollections.observableArrayList(
-    	    new Productos("Jacob", "Smith" ,0.0, "jacob.smith@example.com", ""),
-    	    new Productos("Jacob", "Smith" ,0.0, "jacob.smith@example.com", ""),
-    	    new Productos("Jacob", "Smith" ,0.0, "jacob.smith@example.com", ""),
-    	    new Productos("Jacob", "Smith" ,0.0, "jacob.smith@example.com", ""),
-    	    new Productos("Jacob", "Smith" ,0.0, "jacob.smith@example.com", "")
-    	   
-    	);
+    	    new Productos("Play Station 4", "Consola" ,400.0, "China", "00034"),
+    	    new Productos("Elden Ring", "Videojuego" ,60.0, "China", "00032"),
+    	    new Productos("Logitec 933", "Periferico" ,80.0, "Portugal", "00045"),
+    	    new Productos("Skyrim", "Videojuego" ,40.0, "España", "00061"),
+    	    new Productos("Xbox 360", "Consola" ,300.0, "España", "00099"));
     @FXML
     void initialize() {
        
@@ -63,7 +62,7 @@ public class DatosController {
              nombreProduc.setCellValueFactory(new PropertyValueFactory<Productos,String>("firstName"));
         	
         	
-        	listaNombresEmpleados.setItems(data);
+        	listaNombresEmpleados.setItems(dataEmpleados);
         	listaNombresProducto.setItems(dataPro);
     	
     	
