@@ -3,6 +3,8 @@ package EditarDatos;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import Clases.Persona;
+import Clases.Productos;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -14,8 +16,6 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.ComboBoxListCell;
 import javafx.scene.control.cell.PropertyValueFactory;
-import mostrarDatos.Persona;
-import mostrarDatos.Productos;
 
 public class EditarDatosController {
 
@@ -52,11 +52,11 @@ public class EditarDatosController {
     private TableColumn<Productos, String> nombreProduc;
     
     private ObservableList<Persona> dataEmpleados = FXCollections.observableArrayList(
-    	    new Persona("Alberto", "Sanchez" ,0, "Alberto.smith@example.com", ""),
-    	    new Persona("Lucia", "Garcia" ,0, "Lucia.smith@example.com", ""),
-    	    new Persona("Antonio", "Blas" ,0, "Antonio.smith@example.com", ""),
-    	    new Persona("Javier", "Escalera" ,0, "Javier.smith@example.com", ""),
-    	    new Persona("Miguel", "Smith" ,0, "Miguel.smith@example.com", "")
+    	    new Persona("Alberto", "Sanchez" ,620141444, "", "Alberto.smith@example.com"),
+    	    new Persona("Lucia", "Garcia" ,51566115, "", "Lucia.smith@example.com"),
+    	    new Persona("Antonio", "Blas" ,51566115, "", "Antonio.smith@example.com"),
+    	    new Persona("Javier", "Escalera" ,51566115, "", "Javier.smith@example.com"),
+    	    new Persona("Miguel", "Smith" ,51566115, "", "Miguel.smith@example.com")
     	);
     
 

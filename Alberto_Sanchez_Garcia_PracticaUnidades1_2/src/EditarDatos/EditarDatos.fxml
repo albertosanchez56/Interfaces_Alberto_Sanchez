@@ -377,17 +377,17 @@
                                                             <Insets left="10.0" />
                                                          </padding>
                                                       </Label>
-                                                      <TextField editable="false" prefHeight="25.0" prefWidth="250.0" GridPane.columnIndex="1">
+                                                      <TextField prefHeight="25.0" prefWidth="250.0" GridPane.columnIndex="1">
                                                          <opaqueInsets>
                                                             <Insets />
                                                          </opaqueInsets>
                                                       </TextField>
-                                                      <TextField editable="false" layoutX="243.0" layoutY="464.0" prefHeight="25.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                                      <TextField layoutX="243.0" layoutY="464.0" prefHeight="25.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                                                          <opaqueInsets>
                                                             <Insets />
                                                          </opaqueInsets>
                                                       </TextField>
-                                                      <ChoiceBox fx:id="procedenciaCombo" prefHeight="25.0" prefWidth="245.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                      <ChoiceBox fx:id="procedenciaCombo" prefHeight="25.0" prefWidth="245.0" style="-fx-text-fill: #404040;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                                                       <Slider max="1000.0" prefHeight="38.0" prefWidth="317.0" showTickLabels="true" showTickMarks="true" style="-fx-background-color: #FFFFFF;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                                       <ComboBox fx:id="tipoCombo" prefHeight="25.0" prefWidth="243.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                                       <Button mnemonicParsing="false" text="Añadir" GridPane.columnIndex="1" GridPane.rowIndex="5">
@@ -446,7 +446,7 @@
                                                             <Image url="@../img/Captura.PNG" />
                                                          </image>
                                                       </ImageView>
-                                                      <Label prefHeight="17.0" prefWidth="133.0" text="Nombre del Producto" GridPane.rowIndex="1">
+                                                      <Label prefHeight="17.0" prefWidth="147.0" text="Nombre del Producto" GridPane.rowIndex="1">
                                                          <GridPane.margin>
                                                             <Insets left="10.0" />
                                                          </GridPane.margin>

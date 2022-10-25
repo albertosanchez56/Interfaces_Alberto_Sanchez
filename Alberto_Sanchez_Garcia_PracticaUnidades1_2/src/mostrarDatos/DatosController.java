@@ -3,7 +3,8 @@ package mostrarDatos;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-
+import Clases.Persona;
+import Clases.Productos;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;

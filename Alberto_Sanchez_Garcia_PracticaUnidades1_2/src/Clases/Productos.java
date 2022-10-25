@@ -1,4 +1,4 @@
-package mostrarDatos;
+package Clases;
 
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
