@@ -97,7 +97,7 @@ public class EditarDatosController {
 	        );
 		
 		for (int i = 0; i < 10; i++) {
-            data.add("Indeterminate (pick a choice)");
+            data.add("Indefinido (elige una opcion)");
         }
     }
 }

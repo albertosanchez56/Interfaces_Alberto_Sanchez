@@ -126,17 +126,17 @@
                                                          </GridPane.margin>
                                                       </Text>
                                                       <ComboBox prefHeight="25.0" prefWidth="236.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                                                      <PasswordField GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                                      <PasswordField text="1234141414" GridPane.columnIndex="1" GridPane.rowIndex="7" />
                                                       <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="añadir" GridPane.columnIndex="1" GridPane.rowIndex="9">
                                                          <GridPane.margin>
                                                             <Insets bottom="10.0" left="300.0" />
                                                          </GridPane.margin>
                                                       </Button>
-                                                      <TextField GridPane.columnIndex="1" />
-                                                      <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                                      <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                                      <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                                      <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                      <TextField promptText="Nombre" GridPane.columnIndex="1" />
+                                                      <TextField promptText="Apellidos" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <TextField promptText="Telefono" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                      <TextField promptText="Dirccion" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                      <TextField promptText="email" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                                                       <Text fill="WHITE" layoutX="30.0" layoutY="462.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calificaciones" wrappingWidth="135.13671875" GridPane.rowIndex="8">
                                                          <font>
                                                             <Font name="System Bold" size="14.0" />
@@ -377,12 +377,12 @@
                                                             <Insets left="10.0" />
                                                          </padding>
                                                       </Label>
-                                                      <TextField prefHeight="25.0" prefWidth="250.0" GridPane.columnIndex="1">
+                                                      <TextField prefHeight="25.0" prefWidth="250.0" promptText="Nombre" GridPane.columnIndex="1">
                                                          <opaqueInsets>
                                                             <Insets />
                                                          </opaqueInsets>
                                                       </TextField>
-                                                      <TextField layoutX="243.0" layoutY="464.0" prefHeight="25.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                                      <TextField layoutX="243.0" layoutY="464.0" prefHeight="25.0" prefWidth="250.0" promptText="Codigo" GridPane.columnIndex="1" GridPane.rowIndex="4">
                                                          <opaqueInsets>
                                                             <Insets />
                                                          </opaqueInsets>
