@@ -31,12 +31,22 @@ public class EditarDatosController {
 
     @FXML
     private ListView<String> list1;
+    @FXML
+    private ListView<String> list2;
     
     @FXML
     private ChoiceBox<String> procedenciaCombo;
     @FXML
+    private ChoiceBox<String> procedenciaCombo2;
+    @FXML
     private ComboBox<Object> tipoCombo;
-    
+    @FXML
+    private ComboBox<Object> tipoCombo2;
+
+    @FXML
+    private ComboBox<Object> puestoCombo;
+    @FXML
+    private ComboBox<Object> puestoCombo2;
     @FXML
     private TableView<Productos> listaNombresProducto;
     @FXML
@@ -72,8 +82,7 @@ public class EditarDatosController {
     private TableColumn<Productos, String> tipoCol;
     
     
-    @FXML
-    private ComboBox<Object> puestoCombo;
+   
     
     private ObservableList<Persona> dataEmpleados = FXCollections.observableArrayList(
     	    new Persona("Alberto", "Sanchez" ,620141444, "C/asdasdasdasdas", "Alberto.smith@example.com"),
@@ -114,15 +123,25 @@ public class EditarDatosController {
     	tipoCombo.setItems(FXCollections.observableArrayList("Consola","Periferico","Videojuego"));
     	tipoCombo.setValue("Seleciona un tipo");
     	
+    	tipoCombo2.setItems(FXCollections.observableArrayList("Consola","Periferico","Videojuego"));
+    	tipoCombo2.setValue("Seleciona un tipo");
+    	
     	
     	procedenciaCombo.setItems(FXCollections.observableArrayList("España","China","Portugal"));
     	procedenciaCombo.setValue("Seleciona un pais");
     	
+    	procedenciaCombo2.setItems(FXCollections.observableArrayList("España","China","Portugal"));
+    	procedenciaCombo2.setValue("Seleciona un pais");
+    	
     	puestoCombo.setItems(FXCollections.observableArrayList("Encargado","Manager","Contable"));
+    	puestoCombo2.setItems(FXCollections.observableArrayList("Encargado","Manager","Contable"));
     	
 		list1.setItems(data);
 		list1.setEditable(true);
 		list1.setCellFactory(ComboBoxListCell.forListView(names));
+		list2.setItems(data);
+		list2.setEditable(true);
+		list2.setCellFactory(ComboBoxListCell.forListView(names));
 		
 		names.addAll(
 	             "trabajador", "productivo", "actitud positiva", "empatico",

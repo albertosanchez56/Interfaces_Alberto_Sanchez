@@ -6,9 +6,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="750.0" vmax="10.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
   <content>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="648.0" prefWidth="750.0">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="755.0" prefWidth="750.0">
          <children>
             <Text layoutX="11.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="En esta aplicacion podras visualizar , añadir, editar y borrar datos sobre los empleados y los porductos de una tienda de videojuegos." />
             <Text layoutX="11.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Para acceder a la informacion de los empleados y de los productos tendras que dar clic en la barra superior donde pone &quot;Datos&quot; y se desplegaran dos opciones" wrappingWidth="707.486328125" />
@@ -30,7 +30,13 @@
                   <Image url="@../img/Captura3.PNG" />
                </image>
             </ImageView>
-            <Text layoutX="9.0" layoutY="536.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Para añadir un nuevo registro tienes que rellenar el formulario y darle al boton &quot;añadir&quot; y en &quot;editar o borrar&quot; podras elegir entre los registros para modificarlos con el formulario o borrarlos" wrappingWidth="711.5859375" />
+            <Text layoutX="9.0" layoutY="706.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Para añadir un nuevo registro tienes que rellenar el formulario y darle al boton &quot;añadir&quot; y en &quot;editar o borrar&quot; podras elegir entre los registros para modificarlos con el formulario o borrarlos" wrappingWidth="711.5859375" />
+            <Text layoutX="15.0" layoutY="536.0" strokeType="OUTSIDE" strokeWidth="0.0" text="En la seccion de añadir un nuevo empleado una de los registros son las cualidades en las que tendras que al darle doble click a una fila te saldra un desplegable con todas las opciones" wrappingWidth="718.58984375" />
+            <ImageView fitHeight="129.0" fitWidth="357.0" layoutX="9.0" layoutY="557.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Captura4.png" />
+               </image>
+            </ImageView>
          </children></AnchorPane>
   </content>
 </ScrollPane>

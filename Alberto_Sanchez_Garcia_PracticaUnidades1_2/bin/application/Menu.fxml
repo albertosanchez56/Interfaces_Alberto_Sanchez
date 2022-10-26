@@ -33,7 +33,7 @@
           </Menu>
           <Menu mnemonicParsing="false" text="Ayuda">
             <items>
-              <MenuItem mnemonicParsing="false" onAction="#abrirAyuda" style="-fx-background-color: #404040;" text="About" />
+              <MenuItem mnemonicParsing="false" onAction="#abrirAyuda" style="-fx-background-color: #404040;" text="funcionamiento" />
             </items>
           </Menu>
         </menus>

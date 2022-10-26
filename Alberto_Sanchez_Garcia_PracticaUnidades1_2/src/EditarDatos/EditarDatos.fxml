@@ -126,7 +126,7 @@
                                                             <Insets left="20.0" />
                                                          </GridPane.margin>
                                                       </Text>
-                                                      <ComboBox fx:id="puestoCombo" prefHeight="25.0" prefWidth="236.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                      <ComboBox fx:id="puestoCombo2" prefHeight="25.0" prefWidth="236.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                                                       <PasswordField text="1234141414" GridPane.columnIndex="1" GridPane.rowIndex="7" />
                                                       <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="añadir" GridPane.columnIndex="1" GridPane.rowIndex="9">
                                                          <GridPane.margin>
@@ -146,7 +146,7 @@
                                                             <Insets left="20.0" />
                                                          </GridPane.margin>
                                                       </Text>
-                                                      <ListView fx:id="list1" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                                      <ListView fx:id="list2" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
                                                       <RadioButton layoutX="309.0" layoutY="330.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="283.0" text="Femenino" GridPane.columnIndex="1" GridPane.rowIndex="5">
                                                          <padding>
                                                             <Insets left="200.0" />
@@ -421,9 +421,9 @@
                                                             <Insets />
                                                          </opaqueInsets>
                                                       </TextField>
-                                                      <ChoiceBox fx:id="procedenciaCombo" prefHeight="25.0" prefWidth="245.0" style="-fx-text-fill: #404040;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                      <ChoiceBox fx:id="procedenciaCombo2" prefHeight="25.0" prefWidth="245.0" style="-fx-text-fill: #404040;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                                                       <Slider max="1000.0" prefHeight="38.0" prefWidth="317.0" showTickLabels="true" showTickMarks="true" style="-fx-background-color: #FFFFFF;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                                      <ComboBox fx:id="tipoCombo" prefHeight="25.0" prefWidth="243.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <ComboBox fx:id="tipoCombo2" prefHeight="25.0" prefWidth="243.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                                       <Button mnemonicParsing="false" text="Añadir" GridPane.columnIndex="1" GridPane.rowIndex="6">
                                                          <GridPane.margin>
                                                             <Insets left="200.0" />

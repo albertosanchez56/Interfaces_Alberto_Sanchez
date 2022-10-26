@@ -11,6 +11,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TreeItem;
+import javafx.scene.control.TreeView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 public class DatosController {
@@ -57,7 +59,12 @@ public class DatosController {
     private TableColumn<Productos, String> procedenciaCol;
     @FXML
     private TableColumn<Productos, String> tipoCol;
+    
+    @FXML
+    private TreeView<String> tree1;
 
+    @FXML
+    private TreeView<String> tree2;
    
     private ObservableList<Persona> dataEmpleados = FXCollections.observableArrayList(
     	    new Persona("Alberto", "Sanchez" ,620141444, "C/asdasdasdasdas", "Alberto.smith@example.com"),
@@ -92,6 +99,30 @@ public class DatosController {
         direccionCol.setCellValueFactory(new PropertyValueFactory<Persona,String>("direccion"));
         emailCol.setCellValueFactory(new PropertyValueFactory<Persona,String>("email"));
         	
+        
+        TreeItem<String> rootItem=new TreeItem<String>("Puestos");
+		TreeItem<String> encargado=new TreeItem<String>("Encargado");
+		TreeItem<String> Marke=new TreeItem<String>("Marketing");	
+		TreeItem<String> manager=new TreeItem<String>("Manager");
+		TreeItem<String> cost=new TreeItem<String>("Contable");
+		rootItem.getChildren().add(encargado);
+		rootItem.getChildren().add(Marke);
+		rootItem.getChildren().add(manager);
+		rootItem.getChildren().add(cost);
+		
+		rootItem.setExpanded(true);
+		tree1.setRoot(rootItem);
+		
+		 TreeItem<String> rootItem2=new TreeItem<String>("Tipos de producto");
+			TreeItem<String> consola=new TreeItem<String>("Consola");
+			TreeItem<String> periferico=new TreeItem<String>("Periferico");	
+			TreeItem<String> videojuegos=new TreeItem<String>("Videojuegos");
+			rootItem2.getChildren().add(consola);
+			rootItem2.getChildren().add(periferico);
+			rootItem2.getChildren().add(videojuegos);
+			
+			rootItem2.setExpanded(true);
+			tree2.setRoot(rootItem2);
         	
         	listaNombresEmpleados.setItems(dataEmpleados);
         	listaNombresProducto.setItems(dataPro);

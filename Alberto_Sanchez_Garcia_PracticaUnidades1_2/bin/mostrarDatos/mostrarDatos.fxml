@@ -8,6 +8,7 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -27,7 +28,7 @@
                      <children>
                         <TextField layoutX="3.0" layoutY="77.0" prefHeight="25.0" prefWidth="196.0" />
                         <Button layoutX="200.0" layoutY="77.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="69.0" text="Buscar" />
-                        <TableView fx:id="listaNombresEmpleados" layoutX="3.0" layoutY="103.0" prefHeight="402.0" prefWidth="267.0">
+                        <TableView fx:id="listaNombresEmpleados" layoutX="3.0" layoutY="103.0" prefHeight="324.0" prefWidth="267.0">
                           <columns>
                             <TableColumn fx:id="firstNameCol" editable="false" prefWidth="129.0" text="Nombre" />
                             <TableColumn fx:id="lastNameCol" prefWidth="151.0" text="Apellido" />
@@ -36,6 +37,7 @@
                               <TableColumn fx:id="emailCol" prefWidth="75.0" text="Email" />
                           </columns>
                         </TableView>
+                        <TreeView fx:id="tree1" layoutX="21.0" layoutY="437.0" prefHeight="154.0" prefWidth="200.0" />
                      </children>
                   </AnchorPane>
                   <AnchorPane prefHeight="621.0" prefWidth="521.0">
@@ -143,7 +145,7 @@
                      <children>
                         <TextField layoutX="3.0" layoutY="77.0" prefHeight="25.0" prefWidth="198.0" />
                         <Button layoutX="202.0" layoutY="77.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" text="Buscar" />
-                        <TableView fx:id="listaNombresProducto" layoutX="3.0" layoutY="103.0" prefHeight="402.0" prefWidth="267.0">
+                        <TableView fx:id="listaNombresProducto" layoutX="3.0" layoutY="103.0" prefHeight="328.0" prefWidth="267.0">
                            <columns>
                               <TableColumn fx:id="nombreProduc" editable="false" prefWidth="266.0" text="Nombre del producto" />
                               <TableColumn fx:id="tipoCol" prefWidth="75.0" text="Tipo" />
@@ -152,6 +154,7 @@
                               <TableColumn fx:id="codigoCol" prefWidth="75.0" text="Codigo" />
                            </columns>
                         </TableView>
+                        <TreeView fx:id="tree2" layoutX="21.0" layoutY="437.0" prefHeight="154.0" prefWidth="200.0" />
                      </children>
                   </AnchorPane>
                   <AnchorPane prefHeight="621.0" prefWidth="521.0">
