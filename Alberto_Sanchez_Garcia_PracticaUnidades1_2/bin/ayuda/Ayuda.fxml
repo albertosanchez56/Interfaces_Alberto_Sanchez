@@ -17,6 +17,20 @@
                   <Image url="@../img/Captura1.png" />
                </image>
             </ImageView>
+            <Text layoutX="11.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Al darle al boton &quot;abrir&quot; te mostrara los datos de los empleados y de los productos " />
+            <ImageView fitHeight="191.0" fitWidth="193.0" layoutX="11.0" layoutY="186.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Captura2.PNG" />
+               </image>
+            </ImageView>
+            <Text layoutX="15.0" layoutY="390.0" strokeType="OUTSIDE" strokeWidth="0.0" text="En las tablas de la izquierda podras selecionar y buscar los nombres para mostrar los datos a la derecha. Si le damos al boton de &quot;cerrar&quot; de antes podremos cerrar el formulario." wrappingWidth="720.095703125" />
+            <Text layoutX="17.0" layoutY="424.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Al darle al boton de &quot;editar&quot; nos volvera a dar la opcion de abrir o cerrar el formulario. Al abrir la opcion de editar te dara la opcion de añadir un nuevo registro o editar o borrarlo." wrappingWidth="715.13671875" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="445.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Captura3.PNG" />
+               </image>
+            </ImageView>
+            <Text layoutX="9.0" layoutY="536.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Para añadir un nuevo registro tienes que rellenar el formulario y darle al boton &quot;añadir&quot; y en &quot;editar o borrar&quot; podras elegir entre los registros para modificarlos con el formulario o borrarlos" wrappingWidth="711.5859375" />
          </children></AnchorPane>
   </content>
 </ScrollPane>

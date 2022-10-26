@@ -114,6 +114,7 @@ public class EditarDatosController {
     	tipoCombo.setItems(FXCollections.observableArrayList("Consola","Periferico","Videojuego"));
     	tipoCombo.setValue("Seleciona un tipo");
     	
+    	
     	procedenciaCombo.setItems(FXCollections.observableArrayList("España","China","Portugal"));
     	procedenciaCombo.setValue("Seleciona un pais");
     	
@@ -124,9 +125,9 @@ public class EditarDatosController {
 		list1.setCellFactory(ComboBoxListCell.forListView(names));
 		
 		names.addAll(
-	             "Object", "Classes", "Functions", "Variables",
-	             "Compiler", "Debugger", "Projects", "Beans", 
-	             "Libraries", "Modules"
+	             "trabajador", "productivo", "actitud positiva", "empatico",
+	             "polivalente", "autodidacta", "puntual", "creativo"
+	             
 	        );
 		
 		for (int i = 0; i < 10; i++) {

@@ -30,7 +30,7 @@
                   <Image url="@../img/Captura3.PNG" />
                </image>
             </ImageView>
-            <Text layoutX="14.0" layoutY="543.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Para añadir un nuevo registro tienes que rellenar el formulario y darle al boton &quot;añadir&quot;" />
+            <Text layoutX="9.0" layoutY="536.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Para añadir un nuevo registro tienes que rellenar el formulario y darle al boton &quot;añadir&quot; y en &quot;editar o borrar&quot; podras elegir entre los registros para modificarlos con el formulario o borrarlos" wrappingWidth="711.5859375" />
          </children></AnchorPane>
   </content>
 </ScrollPane>
