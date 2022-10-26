@@ -568,7 +568,7 @@
                                                          </GridPane.margin>
                                                       </Button>
                                                       <ComboBox fx:id="tipoCombo" prefHeight="25.0" prefWidth="243.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                                      <ChoiceBox fx:id="procedenciaCombo" prefHeight="25.0" prefWidth="245.0" style="-fx-text-fill: #404040;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                      <ChoiceBox fx:id="procedenciaCombo" prefHeight="25.0" prefWidth="245.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                                                    </children>
                                                    <opaqueInsets>
                                                       <Insets right="10.0" />
