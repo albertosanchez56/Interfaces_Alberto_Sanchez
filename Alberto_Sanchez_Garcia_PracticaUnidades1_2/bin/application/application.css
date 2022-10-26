@@ -9,6 +9,6 @@
     -fx-text-fill: #FFFFFF;
     -fx-opacity: 0.6;
 }
-.choice-box.label{
+.choice.box .label{
 	-fx-text-fill: #404040;
 }

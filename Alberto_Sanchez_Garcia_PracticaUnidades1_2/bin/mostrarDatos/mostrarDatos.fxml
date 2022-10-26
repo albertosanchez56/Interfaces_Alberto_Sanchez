@@ -37,7 +37,7 @@
                               <TableColumn fx:id="emailCol" prefWidth="75.0" text="Email" />
                           </columns>
                         </TableView>
-                        <TreeView fx:id="tree1" layoutX="21.0" layoutY="437.0" prefHeight="154.0" prefWidth="200.0" />
+                        <TreeView fx:id="tree1" layoutX="21.0" layoutY="437.0" prefHeight="144.0" prefWidth="200.0" />
                      </children>
                   </AnchorPane>
                   <AnchorPane prefHeight="621.0" prefWidth="521.0">
@@ -154,7 +154,7 @@
                               <TableColumn fx:id="codigoCol" prefWidth="75.0" text="Codigo" />
                            </columns>
                         </TableView>
-                        <TreeView fx:id="tree2" layoutX="21.0" layoutY="437.0" prefHeight="154.0" prefWidth="200.0" />
+                        <TreeView fx:id="tree2" layoutX="21.0" layoutY="437.0" prefHeight="140.0" prefWidth="200.0" />
                      </children>
                   </AnchorPane>
                   <AnchorPane prefHeight="621.0" prefWidth="521.0">

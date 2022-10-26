@@ -136,7 +136,7 @@
                                                       <TextField promptText="Nombre" GridPane.columnIndex="1" />
                                                       <TextField promptText="Apellidos" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                                       <TextField promptText="Telefono" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                                      <TextField promptText="Dirccion" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                      <TextField promptText="Direccion" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                                                       <TextField promptText="email" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                                                       <Text fill="WHITE" layoutX="30.0" layoutY="462.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cualidades" wrappingWidth="135.13671875" GridPane.rowIndex="8">
                                                          <font>
@@ -147,7 +147,7 @@
                                                          </GridPane.margin>
                                                       </Text>
                                                       <ListView fx:id="list2" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-                                                      <RadioButton layoutX="309.0" layoutY="330.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="283.0" text="Femenino" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                                      <RadioButton layoutX="309.0" layoutY="330.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="283.0" text="Femenino" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
                                                          <padding>
                                                             <Insets left="200.0" />
                                                          </padding>
@@ -155,7 +155,7 @@
                                                             <ToggleGroup fx:id="Opciones" />
                                                          </toggleGroup>
                                                       </RadioButton>
-                                                      <RadioButton mnemonicParsing="false" text="Masculino" toggleGroup="$Opciones" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                      <RadioButton mnemonicParsing="false" text="Masculino" textFill="WHITE" toggleGroup="$Opciones" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                                                    </children>
                                                 </GridPane>
                                              </children>
@@ -297,20 +297,29 @@
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
                                                       </Label>
                                                       <Label layoutX="10.0" layoutY="370.0" prefHeight="17.0" prefWidth="70.0" text="Puesto" GridPane.rowIndex="7">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
                                                       </Label>
                                                       <Label layoutX="10.0" layoutY="418.0" prefHeight="17.0" prefWidth="70.0" text="cualidades" GridPane.rowIndex="8">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
                                                       </Label>
                                                       <ListView fx:id="list1" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
                                                       <ComboBox fx:id="puestoCombo" prefHeight="25.0" prefWidth="236.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                                                      <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="283.0" text="Femenino" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                                      <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="283.0" text="Femenino" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="6">
                                                          <padding>
                                                             <Insets left="100.0" />
                                                          </padding>
@@ -318,7 +327,7 @@
                                                             <ToggleGroup fx:id="Opciones2" />
                                                          </toggleGroup>
                                                       </RadioButton>
-                                                      <RadioButton mnemonicParsing="false" text="Masculino" toggleGroup="$Opciones2" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                      <RadioButton mnemonicParsing="false" text="Masculino" textFill="WHITE" toggleGroup="$Opciones2" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                                                    </children>
                                                    <opaqueInsets>
                                                       <Insets right="10.0" />
@@ -421,7 +430,7 @@
                                                             <Insets />
                                                          </opaqueInsets>
                                                       </TextField>
-                                                      <ChoiceBox fx:id="procedenciaCombo2" prefHeight="25.0" prefWidth="245.0" style="-fx-text-fill: #404040;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                      <ChoiceBox fx:id="procedenciaCombo2" prefHeight="25.0" prefWidth="245.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                                                       <Slider max="1000.0" prefHeight="38.0" prefWidth="317.0" showTickLabels="true" showTickMarks="true" style="-fx-background-color: #FFFFFF;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                                       <ComboBox fx:id="tipoCombo2" prefHeight="25.0" prefWidth="243.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                                       <Button mnemonicParsing="false" text="Añadir" GridPane.columnIndex="1" GridPane.rowIndex="6">

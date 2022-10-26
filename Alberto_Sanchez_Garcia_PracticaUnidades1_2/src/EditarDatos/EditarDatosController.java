@@ -127,10 +127,10 @@ public class EditarDatosController {
     	tipoCombo2.setValue("Seleciona un tipo");
     	
     	
-    	procedenciaCombo.setItems(FXCollections.observableArrayList("España","China","Portugal"));
+    	procedenciaCombo.setItems(FXCollections.observableArrayList("España","China","Portugal","India","Francia","Inglaterra"));
     	procedenciaCombo.setValue("Seleciona un pais");
     	
-    	procedenciaCombo2.setItems(FXCollections.observableArrayList("España","China","Portugal"));
+    	procedenciaCombo2.setItems(FXCollections.observableArrayList("España","China","Portugal","India","Francia","Inglaterra"));
     	procedenciaCombo2.setValue("Seleciona un pais");
     	
     	puestoCombo.setItems(FXCollections.observableArrayList("Encargado","Manager","Contable"));
