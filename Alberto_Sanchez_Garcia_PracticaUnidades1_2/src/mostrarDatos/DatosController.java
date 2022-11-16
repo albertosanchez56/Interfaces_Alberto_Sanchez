@@ -2,9 +2,11 @@ package mostrarDatos;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import application.Main;
 
 import Clases.Persona;
 import Clases.Productos;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -65,8 +67,10 @@ public class DatosController {
 
     @FXML
     private TreeView<String> tree2;
+    
+    private Main mainApp;
    
-    private ObservableList<Persona> dataEmpleados = FXCollections.observableArrayList(
+   /* private ObservableList<Persona> dataEmpleados = FXCollections.observableArrayList(
     	    new Persona("Alberto", "Sanchez" ,620141444, "C/asdasdasdasdas", "Alberto.smith@example.com"),
     	    new Persona("Lucia", "Garcia" ,51566115, "C/asdasdasdasdas", "Lucia.smith@example.com"),
     	    new Persona("Antonio", "Blas" ,51566115, "C/asdasdasdasdas", "Antonio.smith@example.com"),
@@ -82,12 +86,12 @@ public class DatosController {
     	    new Productos("Skyrim", "Videojuego" ,40.0, "España", "00061"),
     	    new Productos("Xbox 360", "Consola" ,300.0, "España", "00099")
     	   
-    	);
+    	);*/
     @FXML
     void initialize() {
        
     	
-    	nombreProduc.setCellValueFactory(new PropertyValueFactory<Productos,String>("firstName"));
+    	/*nombreProduc.setCellValueFactory(new PropertyValueFactory<Productos,String>("firstName"));
     	tipoCol.setCellValueFactory(new PropertyValueFactory<Productos,String>("tipo"));
     	precioCol.setCellValueFactory(new PropertyValueFactory<Productos,Double>("precio"));
     	procedenciaCol.setCellValueFactory(new PropertyValueFactory<Productos,String>("procedencia"));
@@ -98,7 +102,13 @@ public class DatosController {
         telefonoCol.setCellValueFactory(new PropertyValueFactory<Persona,Integer>("telefono"));
         direccionCol.setCellValueFactory(new PropertyValueFactory<Persona,String>("direccion"));
         emailCol.setCellValueFactory(new PropertyValueFactory<Persona,String>("email"));
-        	
+        	*/
+    	firstNameCol.setCellValueFactory(cellData -> cellData.getValue().firstNameProperty());
+    	lastNameCol.setCellValueFactory(cellData -> cellData.getValue().lastNameProperty());
+    	//telefonoCol.setCellValueFactory(cellData -> cellData.getValue().telefonoProperty());
+    	telefonoCol.setCellValueFactory(cellData ->new StringProperty());
+    	direccionCol.setCellValueFactory(cellData -> cellData.getValue().direccionProperty());
+    	emailCol.setCellValueFactory(cellData -> cellData.getValue().emailProperty());
         
         TreeItem<String> rootItem=new TreeItem<String>("Puestos");
 		TreeItem<String> encargado=new TreeItem<String>("Encargado");
@@ -124,12 +134,21 @@ public class DatosController {
 			rootItem2.setExpanded(true);
 			tree2.setRoot(rootItem2);
         	
-        	listaNombresEmpleados.setItems(dataEmpleados);
-        	listaNombresProducto.setItems(dataPro);
+        	//listaNombresEmpleados.setItems(dataEmpleados);
+        	//listaNombresProducto.setItems(dataPro);
     	
     	
     	
     }
+    public void setMainApp(Main mainApp) {
+        this.mainApp = mainApp;
+
+        listaNombresEmpleados.setItems(this.mainApp.getPersonData());
+               
+        // TODO Versión con map
+        //personTable.setItems(this.mainApp.getMapData()); 
+    }
+    
 
 	
 }

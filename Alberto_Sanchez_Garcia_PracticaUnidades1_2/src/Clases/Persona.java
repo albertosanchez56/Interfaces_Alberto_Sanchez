@@ -1,7 +1,9 @@
 package Clases;
 
+import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 
 public class Persona {
 
@@ -57,8 +59,27 @@ public class Persona {
         email.set(sdireccion);
     }
       
+    public StringProperty firstNameProperty() {
+		return firstName;
+	}
+    public StringProperty lastNameProperty() {
+    	return lastName;
+    }
       
-
+    public IntegerProperty telefonoProperty() {
+    	return telefono;
+    }
+      
+    public StringProperty direccionProperty() {
+    	return direccion;
+    }
+      
+    public StringProperty emailProperty() {
+    	return email;
+    }
+      
+    
+    
      
     
  
