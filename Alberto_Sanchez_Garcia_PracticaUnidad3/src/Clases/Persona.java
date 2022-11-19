@@ -16,7 +16,7 @@ public class Persona {
     private final SimpleStringProperty genero;
     
     public Persona() {
-    	this(null, null,null,null,null,null,null);
+    	this(null, null,0,null,null,null,null);
     }
 	public Persona(String fName, String lName, Integer itelefono,String sdireccion, String email,String spuesto,String sgenero) {
         this.firstName = new SimpleStringProperty(fName);

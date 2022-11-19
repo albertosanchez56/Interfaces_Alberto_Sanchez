@@ -86,7 +86,7 @@ public class Main extends Application {
 		    try {
 		        // Cargamos el diseño del diálogo desde un XML
 		        FXMLLoader loader = new FXMLLoader();
-		        loader.setLocation(Main.class.getResource("view/PersonEditDialog.fxml"));
+		        loader.setLocation(Main.class.getResource("/EditarDatos/PersonaEditDiealog.fxml"));
 		        AnchorPane page = (AnchorPane) loader.load();
 
 		        // Se crea un nuevo Stage para mostrar el diálogo
@@ -99,13 +99,13 @@ public class Main extends Application {
 
 		        // Carga la persona en el controlador
 		        EditarDatos.PersonEditDialogController controller = loader.getController();
-		        //controller.setDialogStage(dialogStage);
-		        //controller.setPerson(person);
+		        controller.setDialogStage(dialogStage);
+		        controller.setPerson(person);
 
 		        // Muestra el diálogo y no continúa el código hasta que lo cierra el usuario
 		        dialogStage.showAndWait();
 
-		        return false;//controller.isOkClicked();
+		        return controller.isOkClicked();//controller.isOkClicked();
 		    } catch (IOException e) {
 		        e.printStackTrace();
 		        return false;

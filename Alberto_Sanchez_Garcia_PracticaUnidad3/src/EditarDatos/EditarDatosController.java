@@ -222,14 +222,14 @@ public class EditarDatosController {
     	procedenciaCombo2.setValue("Seleciona un pais");
     	
     	puestoCombo.setItems(FXCollections.observableArrayList("Encargado","Manager","Contable"));
-    	puestoCombo2.setItems(FXCollections.observableArrayList("Encargado","Manager","Contable"));
+    	//puestoCombo2.setItems(FXCollections.observableArrayList("Encargado","Manager","Contable"));
     	
 		list1.setItems(data);
 		list1.setEditable(true);
 		list1.setCellFactory(ComboBoxListCell.forListView(names));
-		list2.setItems(data);
+		/*list2.setItems(data);
 		list2.setEditable(true);
-		list2.setCellFactory(ComboBoxListCell.forListView(names));
+		list2.setCellFactory(ComboBoxListCell.forListView(names));*/
 		
 		names.addAll(
 	             "trabajador", "productivo", "actitud positiva", "empatico",
@@ -253,19 +253,8 @@ public class EditarDatosController {
         //personTable.setItems(this.mainApp.getMapData()); 
     }
     
-    private Stage dialogStage;
-    private Persona person;
-    private boolean okClicked = false;
-    public void setPerson(Persona person) {
-        this.person = person;
-
-        firstName2.setText(person.getFirstName());
-        lastName2.setText(person.getLastName());
-        telefono2.setText(Integer.toString(person.getTelefono()));
-        direcciones2.setText(person.getDireccion());
-        email2.setText(person.getEmail());
-       
-    }
+  
+ 
     /*@FXML
     private void handleOk() {
         if (isInputValid()) {
@@ -281,53 +270,8 @@ public class EditarDatosController {
             dialogStage.close();
         }
     }*/
-    public boolean isOkClicked() {
-        return okClicked;
-    }
-    private boolean isInputValid() {
-    	String errorMessage = "";
-    	
-    	if (firstName2.getText() == null || firstName2.getText().length() == 0) {
-            errorMessage += "El campo first name está vacío\n"; 
-        }
-        if (lastName2.getText() == null || lastName2.getText().length() == 0) {
-            errorMessage += "El campo last name está vacío\n"; 
-        }
-        if (telefono2.getText() == null || telefono2.getText().length() == 0) {
-            errorMessage += "El campo postal code está vacío\n"; 
-        } else {
-            // Se intenta convertir el código postal en entero y si da un error se muestra un mensaje
-            try {
-                Integer.parseInt(telefono2.getText());
-            } catch (NumberFormatException e) {
-                errorMessage += "Telefono no válido. Debe ser un número entero\n"; 
-            }
-        }
-        if (direcciones2.getText() == null || direcciones2.getText().length() == 0) {
-            errorMessage += "El campo street está vacío\n"; 
-        }
-        if (email2.getText() == null || email2.getText().length() == 0) {
-            errorMessage += "El campo street está vacío\n"; 
-        }
-
-        if (errorMessage.length() == 0) {
-            return true;
-        } else {
-        	// Se muestra un alert si no se puede eliminar la fila
-    		Alert errorAlert = new Alert(AlertType.ERROR);
-        	
-    		errorAlert.setTitle("Hay campos incorrectos");
-    		errorAlert.setHeaderText("Por favor, rellena correctamente los campos");
-    		errorAlert.setContentText(errorMessage);
-    		
-    		errorAlert.showAndWait();
-            return false;
-        }
-    	
-    }
-    public void setDialogStage(Stage dialogStage) {
-        this.dialogStage = dialogStage;
-    }
+   
+   
     private void showPersonDetails(Persona person) {
         if (person != null) {
         	// Si el campo contiene datos, entonces se rellena la información
@@ -355,24 +299,15 @@ public class EditarDatosController {
     }
     @FXML
     private void handleNewPerson(ActionEvent event) {
-    	 if (isInputValid()) {
-             person.setFirstName(firstName2.getText());
-             person.setLastName(lastName2.getText());
-             person.setTelefono(Integer.parseInt(telefono2.getText()));
-             person.setDireccion(direcciones2.getText());
-             person.setEmail(email2.getText());
-             
-             
-
-             okClicked = true;
-             
-         }
-        Persona tempPerson = new Persona();
-        boolean okClicked = mainApp.showPersonEditDialog(tempPerson);
-        if (okClicked) {
-            mainApp.getPersonData().add(tempPerson);
-        }       
+    	 Persona tempPerson = new Persona();
+         boolean okClicked = mainApp.showPersonEditDialog(tempPerson);
+         if (okClicked) {
+             mainApp.getPersonData().add(tempPerson);
+         }  
+        
+               
     }
+    
     private void showProductosDetails(Productos produc) {
     	
     	if(produc!=null) {
