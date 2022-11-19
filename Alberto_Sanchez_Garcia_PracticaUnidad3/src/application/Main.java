@@ -112,6 +112,37 @@ public class Main extends Application {
 		    }
 		}
 		
+		public boolean showProductEditDialog(Productos product) {
+		    try {
+		        // Cargamos el diseño del diálogo desde un XML
+		        FXMLLoader loader = new FXMLLoader();
+		        loader.setLocation(Main.class.getResource("/EditarDatos/ProductosEditarDialog.fxml"));
+		        AnchorPane page = (AnchorPane) loader.load();
+
+		        // Se crea un nuevo Stage para mostrar el diálogo
+		        Stage dialogStage = new Stage();
+		        dialogStage.setTitle("Crear o editar producto");
+		        dialogStage.initModality(Modality.WINDOW_MODAL);
+		        dialogStage.initOwner(primaryStage);
+		        Scene scene = new Scene(page);
+		        dialogStage.setScene(scene);
+
+		        // Carga la persona en el controlador
+		        EditarDatos.ProductEditDialogController controller = loader.getController();
+		        controller.setDialogStage(dialogStage);
+		        controller.setProduct(product);
+
+		        // Muestra el diálogo y no continúa el código hasta que lo cierra el usuario
+		        dialogStage.showAndWait();
+
+		        return controller.isOkClicked();//controller.isOkClicked();
+		    } catch (IOException e) {
+		        e.printStackTrace();
+		        return false;
+		    }
+		}
+		
+		
 		public static void main(String[] args) {
 			launch(args);
 		}

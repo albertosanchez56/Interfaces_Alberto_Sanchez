@@ -15,6 +15,10 @@ public class Productos {
 	    private SimpleStringProperty procedencia;
 	    private SimpleStringProperty codigo;
 	    
+	    public Productos() {
+	    	this(null,null,0.0,null,null);
+			// TODO Auto-generated constructor stub
+		}
 	    
 		public Productos(String fName, String stipo, Double dprecio,
 				String sprocedencia, String scodigo) {

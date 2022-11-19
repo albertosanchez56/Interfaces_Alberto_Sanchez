@@ -331,6 +331,68 @@ public class EditarDatosController {
     		errorAlert.showAndWait();
     	}    	
     }
+    
+    @FXML
+    private void handleDeleteProduct(ActionEvent event) {
+       	int selectedIndex = listaNombresProducto.getSelectionModel().getSelectedIndex();
+    	
+    	// Si no hay ningún campo seleccionado, se muestra un alert
+    	if (selectedIndex >= 0) {
+    		// Si se ha seleccionado una fila, se muestra un pop up de confirmación
+    		Alert confirm = new Alert(AlertType.CONFIRMATION);
+        	
+    		confirm.setTitle("Confirmación para eliminar");
+    		//errorAlert.setHeaderText("Va a eliminar la fila seleccionada");
+    		confirm.setContentText("¿Está seguro de eliminar la fila actual?");
+    		    	    		
+    		// Si el usuario acepta, entonces se lleva a cabo la acción correspondiente
+    		confirm.showAndWait().ifPresent(response -> {
+    			if (response == ButtonType.OK) {
+    				listaNombresProducto.getItems().remove(selectedIndex);
+    		    }
+    		});
+    	} else {
+    		// Se muestra un alert si no se puede eliminar la fila
+    		Alert errorAlert = new Alert(AlertType.ERROR);
+        	
+    		errorAlert.setTitle("Error al eliminar");
+    		errorAlert.setHeaderText("Se ha producido un error");
+    		errorAlert.setContentText("No se puede eliminar porque no ha seleccionado una fila o la tabla está vacía");
+    		
+    		errorAlert.showAndWait();
+    	}    	
+    }
+    @FXML
+    private void handleNewProduct(ActionEvent event) {
+    	 Productos tempProduct2 = new Productos();
+         boolean okClicked = mainApp.showProductEditDialog(tempProduct2);
+         if (okClicked) {
+             mainApp.getProductosData().add(tempProduct2);
+         }  
+        
+               
+    }
+    
+    @FXML
+    private void handleEditProdcut(ActionEvent event) {
+    	Productos selectedProduct = listaNombresProducto.getSelectionModel().getSelectedItem();
+        if (selectedProduct != null) {
+            boolean okClicked = mainApp.showProductEditDialog(selectedProduct);
+            if (okClicked) {
+                showProductosDetails(selectedProduct);
+            }
+
+        } else {
+        	// Se muestra un alert si no se puede eliminar la fila
+    		Alert errorAlert = new Alert(AlertType.ERROR);
+        	
+    		errorAlert.setTitle("Error al editar persona");
+    		errorAlert.setHeaderText("No se ha seleccionado ninguna fila");
+    		errorAlert.setContentText("Por favor, selecciona una persona en la tabla");
+    		
+    		errorAlert.showAndWait();
+        }
+    }
     @FXML
     private void handleNewPerson(ActionEvent event) {
     	 Persona tempPerson = new Persona();

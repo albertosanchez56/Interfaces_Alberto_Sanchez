@@ -90,6 +90,7 @@ public class PersonEditDialogController {
 	         }
 	    }
 	    
+	    
 	    @FXML
 	    private void handleCancel() {
 	        dialogStage.close();
