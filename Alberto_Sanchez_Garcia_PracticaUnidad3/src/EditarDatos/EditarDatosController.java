@@ -25,6 +25,7 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.cell.ComboBoxListCell;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Modality;
+import javafx.stage.Stage;
 
 public class EditarDatosController {
 
@@ -132,8 +133,27 @@ public class EditarDatosController {
     @FXML
     private RadioButton mascuRadButton;
     
-   
+    @FXML
+    private TextField firstName2;
+    @FXML
+    private TextField lastName2;
     
+    @FXML
+    private TextField telefono2;
+    
+    @FXML
+    private TextField direcciones2;
+    
+    @FXML
+    private TextField email2;
+    
+    @FXML
+    private RadioButton femeRadButton2;
+    
+    @FXML
+    private RadioButton mascuRadButton2;
+    
+  
    /* private ObservableList<Persona> dataEmpleados = FXCollections.observableArrayList(
     	    new Persona("Alberto", "Sanchez" ,620141444, "C/asdasdasdasdas", "Alberto.smith@example.com"),
     	    new Persona("Lucia", "Garcia" ,51566115, "C/asdasdasdasdas", "Lucia.smith@example.com"),
@@ -221,6 +241,8 @@ public class EditarDatosController {
             data.add("Indefinido (elige una opcion)");
         }
     }
+    
+
     public void setMainApp(Main mainApp) {
         this.mainApp = mainApp;
 
@@ -229,6 +251,82 @@ public class EditarDatosController {
                
         // TODO Versión con map
         //personTable.setItems(this.mainApp.getMapData()); 
+    }
+    
+    private Stage dialogStage;
+    private Persona person;
+    private boolean okClicked = false;
+    public void setPerson(Persona person) {
+        this.person = person;
+
+        firstName2.setText(person.getFirstName());
+        lastName2.setText(person.getLastName());
+        telefono2.setText(Integer.toString(person.getTelefono()));
+        direcciones2.setText(person.getDireccion());
+        email2.setText(person.getEmail());
+       
+    }
+    /*@FXML
+    private void handleOk() {
+        if (isInputValid()) {
+            person.setFirstName(firstName2.getText());
+            person.setLastName(lastName2.getText());
+            person.setTelefono(Integer.parseInt(telefono2.getText()));
+            person.setDireccion(direcciones2.getText());
+            person.setEmail(email2.getText());
+            
+            
+
+            okClicked = true;
+            dialogStage.close();
+        }
+    }*/
+    public boolean isOkClicked() {
+        return okClicked;
+    }
+    private boolean isInputValid() {
+    	String errorMessage = "";
+    	
+    	if (firstName2.getText() == null || firstName2.getText().length() == 0) {
+            errorMessage += "El campo first name está vacío\n"; 
+        }
+        if (lastName2.getText() == null || lastName2.getText().length() == 0) {
+            errorMessage += "El campo last name está vacío\n"; 
+        }
+        if (telefono2.getText() == null || telefono2.getText().length() == 0) {
+            errorMessage += "El campo postal code está vacío\n"; 
+        } else {
+            // Se intenta convertir el código postal en entero y si da un error se muestra un mensaje
+            try {
+                Integer.parseInt(telefono2.getText());
+            } catch (NumberFormatException e) {
+                errorMessage += "Telefono no válido. Debe ser un número entero\n"; 
+            }
+        }
+        if (direcciones2.getText() == null || direcciones2.getText().length() == 0) {
+            errorMessage += "El campo street está vacío\n"; 
+        }
+        if (email2.getText() == null || email2.getText().length() == 0) {
+            errorMessage += "El campo street está vacío\n"; 
+        }
+
+        if (errorMessage.length() == 0) {
+            return true;
+        } else {
+        	// Se muestra un alert si no se puede eliminar la fila
+    		Alert errorAlert = new Alert(AlertType.ERROR);
+        	
+    		errorAlert.setTitle("Hay campos incorrectos");
+    		errorAlert.setHeaderText("Por favor, rellena correctamente los campos");
+    		errorAlert.setContentText(errorMessage);
+    		
+    		errorAlert.showAndWait();
+            return false;
+        }
+    	
+    }
+    public void setDialogStage(Stage dialogStage) {
+        this.dialogStage = dialogStage;
     }
     private void showPersonDetails(Persona person) {
         if (person != null) {
@@ -254,6 +352,26 @@ public class EditarDatosController {
         	emailField.setText("");
             
         }
+    }
+    @FXML
+    private void handleNewPerson(ActionEvent event) {
+    	 if (isInputValid()) {
+             person.setFirstName(firstName2.getText());
+             person.setLastName(lastName2.getText());
+             person.setTelefono(Integer.parseInt(telefono2.getText()));
+             person.setDireccion(direcciones2.getText());
+             person.setEmail(email2.getText());
+             
+             
+
+             okClicked = true;
+             
+         }
+        Persona tempPerson = new Persona();
+        boolean okClicked = mainApp.showPersonEditDialog(tempPerson);
+        if (okClicked) {
+            mainApp.getPersonData().add(tempPerson);
+        }       
     }
     private void showProductosDetails(Productos produc) {
     	
@@ -304,5 +422,25 @@ public class EditarDatosController {
     		
     		errorAlert.showAndWait();
     	}    	
+    }
+    @FXML
+    private void handleEditPerson(ActionEvent event) {
+        Persona selectedPerson = listaNombresEmpleados.getSelectionModel().getSelectedItem();
+        if (selectedPerson != null) {
+            boolean okClicked = mainApp.showPersonEditDialog(selectedPerson);
+            if (okClicked) {
+                showPersonDetails(selectedPerson);
+            }
+
+        } else {
+        	// Se muestra un alert si no se puede eliminar la fila
+    		Alert errorAlert = new Alert(AlertType.ERROR);
+        	
+    		errorAlert.setTitle("Error al editar persona");
+    		errorAlert.setHeaderText("No se ha seleccionado ninguna fila");
+    		errorAlert.setContentText("Por favor, selecciona una persona en la tabla");
+    		
+    		errorAlert.showAndWait();
+        }
     }
 }

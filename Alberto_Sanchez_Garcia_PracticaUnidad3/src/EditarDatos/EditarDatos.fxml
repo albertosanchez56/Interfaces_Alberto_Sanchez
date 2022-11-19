@@ -128,16 +128,16 @@
                                                       </Text>
                                                       <ComboBox fx:id="puestoCombo2" prefHeight="25.0" prefWidth="236.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                                                       <PasswordField text="1234141414" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                                                      <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="añadir" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                                                      <Button mnemonicParsing="false" onAction="#handleNewPerson" prefHeight="25.0" prefWidth="70.0" text="añadir" GridPane.columnIndex="1" GridPane.rowIndex="9">
                                                          <GridPane.margin>
                                                             <Insets bottom="10.0" left="300.0" />
                                                          </GridPane.margin>
                                                       </Button>
-                                                      <TextField promptText="Nombre" GridPane.columnIndex="1" />
-                                                      <TextField promptText="Apellidos" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                                      <TextField promptText="Telefono" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                                      <TextField promptText="Direccion" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                                      <TextField promptText="email" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                      <TextField fx:id="firstName2" promptText="Nombre" GridPane.columnIndex="1" />
+                                                      <TextField fx:id="lastName2" promptText="Apellidos" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <TextField fx:id="telefono2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                      <TextField fx:id="direcciones2" promptText="Direccion" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                      <TextField fx:id="email2" promptText="email" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                                                       <Text fill="WHITE" layoutX="30.0" layoutY="462.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cualidades" wrappingWidth="135.13671875" GridPane.rowIndex="8">
                                                          <font>
                                                             <Font name="System Bold" size="14.0" />
@@ -147,7 +147,7 @@
                                                          </GridPane.margin>
                                                       </Text>
                                                       <ListView fx:id="list2" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-                                                      <RadioButton layoutX="309.0" layoutY="330.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="283.0" text="Femenino" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                                      <RadioButton fx:id="femeRadButton2" layoutX="309.0" layoutY="330.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="283.0" text="Femenino" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
                                                          <padding>
                                                             <Insets left="200.0" />
                                                          </padding>
@@ -155,7 +155,7 @@
                                                             <ToggleGroup fx:id="Opciones" />
                                                          </toggleGroup>
                                                       </RadioButton>
-                                                      <RadioButton mnemonicParsing="false" text="Masculino" textFill="WHITE" toggleGroup="$Opciones" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                      <RadioButton fx:id="mascuRadButton2" mnemonicParsing="false" text="Masculino" textFill="WHITE" toggleGroup="$Opciones" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                                                    </children>
                                                 </GridPane>
                                              </children>

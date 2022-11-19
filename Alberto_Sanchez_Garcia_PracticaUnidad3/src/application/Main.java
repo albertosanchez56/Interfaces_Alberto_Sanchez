@@ -1,19 +1,25 @@
 package application;
 	
+import java.io.IOException;
+
 import Clases.Persona;
 import Clases.Productos;
+import EditarDatos.EditarDatosController;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.control.MenuBar;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 
 
 public class Main extends Application {
 	
+		private Stage primaryStage;
 		private BorderPane rootLayout;	
 		private ObservableList<Persona> personData = FXCollections.observableArrayList();
 		private ObservableList<Productos> proData = FXCollections.observableArrayList();
@@ -64,6 +70,7 @@ public class Main extends Application {
 				
 				// Mostramos la escena del BorderPane de la variable rootLayot
 				Scene scene = new Scene(rootLayout);
+				this.primaryStage = primaryStage;
 				primaryStage.setScene(scene);
 				primaryStage.setResizable(false);
 				
@@ -74,6 +81,35 @@ public class Main extends Application {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+		}
+		public boolean showPersonEditDialog(Persona person) {
+		    try {
+		        // Cargamos el diseño del diálogo desde un XML
+		        FXMLLoader loader = new FXMLLoader();
+		        loader.setLocation(Main.class.getResource("view/PersonEditDialog.fxml"));
+		        AnchorPane page = (AnchorPane) loader.load();
+
+		        // Se crea un nuevo Stage para mostrar el diálogo
+		        Stage dialogStage = new Stage();
+		        dialogStage.setTitle("Crear o editar persona");
+		        dialogStage.initModality(Modality.WINDOW_MODAL);
+		        dialogStage.initOwner(primaryStage);
+		        Scene scene = new Scene(page);
+		        dialogStage.setScene(scene);
+
+		        // Carga la persona en el controlador
+		        EditarDatos.PersonEditDialogController controller = loader.getController();
+		        //controller.setDialogStage(dialogStage);
+		        //controller.setPerson(person);
+
+		        // Muestra el diálogo y no continúa el código hasta que lo cierra el usuario
+		        dialogStage.showAndWait();
+
+		        return false;//controller.isOkClicked();
+		    } catch (IOException e) {
+		        e.printStackTrace();
+		        return false;
+		    }
 		}
 		
 		public static void main(String[] args) {
