@@ -283,7 +283,7 @@
                                                             <Insets />
                                                          </opaqueInsets>
                                                       </TextField>
-                                                      <Button mnemonicParsing="false" text="Eliminar" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                                                      <Button mnemonicParsing="false" onAction="#handleDeletePerson" text="Eliminar" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="9">
                                                          <GridPane.margin>
                                                             <Insets bottom="30.0" left="150.0" />
                                                          </GridPane.margin>
