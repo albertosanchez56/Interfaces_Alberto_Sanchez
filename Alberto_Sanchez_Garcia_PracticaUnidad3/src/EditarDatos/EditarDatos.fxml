@@ -147,7 +147,7 @@
                                                 <Insets bottom="30.0" left="150.0" />
                                              </GridPane.margin>
                                           </Button>
-                                          <Button mnemonicParsing="false" text="Editar" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                                          <Button mnemonicParsing="false" onAction="#handleEditPerson" text="Editar" GridPane.columnIndex="1" GridPane.rowIndex="9">
                                              <GridPane.margin>
                                                 <Insets bottom="30.0" left="90.0" />
                                              </GridPane.margin>

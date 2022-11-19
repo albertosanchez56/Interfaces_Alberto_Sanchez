@@ -133,25 +133,6 @@ public class EditarDatosController {
     @FXML
     private RadioButton mascuRadButton;
     
-    @FXML
-    private TextField firstName2;
-    @FXML
-    private TextField lastName2;
-    
-    @FXML
-    private TextField telefono2;
-    
-    @FXML
-    private TextField direcciones2;
-    
-    @FXML
-    private TextField email2;
-    
-    @FXML
-    private RadioButton femeRadButton2;
-    
-    @FXML
-    private RadioButton mascuRadButton2;
     
   
    /* private ObservableList<Persona> dataEmpleados = FXCollections.observableArrayList(
@@ -210,6 +191,7 @@ public class EditarDatosController {
 
     	//tipoCombo.setItems(FXCollections.observableArrayList("Consola","Periferico","Videojuego"));
     	//tipoCombo.setValue("Seleciona un tipo");
+    	//showPersonDetails(null);
     	
     	tipoCombo2.setItems(FXCollections.observableArrayList("Consola","Periferico","Videojuego"));
     	tipoCombo2.setValue("Seleciona un tipo");
@@ -297,16 +279,7 @@ public class EditarDatosController {
             
         }
     }
-    @FXML
-    private void handleNewPerson(ActionEvent event) {
-    	 Persona tempPerson = new Persona();
-         boolean okClicked = mainApp.showPersonEditDialog(tempPerson);
-         if (okClicked) {
-             mainApp.getPersonData().add(tempPerson);
-         }  
-        
-               
-    }
+  
     
     private void showProductosDetails(Productos produc) {
     	
@@ -357,6 +330,16 @@ public class EditarDatosController {
     		
     		errorAlert.showAndWait();
     	}    	
+    }
+    @FXML
+    private void handleNewPerson(ActionEvent event) {
+    	 Persona tempPerson = new Persona();
+         boolean okClicked = mainApp.showPersonEditDialog(tempPerson);
+         if (okClicked) {
+             mainApp.getPersonData().add(tempPerson);
+         }  
+        
+               
     }
     @FXML
     private void handleEditPerson(ActionEvent event) {

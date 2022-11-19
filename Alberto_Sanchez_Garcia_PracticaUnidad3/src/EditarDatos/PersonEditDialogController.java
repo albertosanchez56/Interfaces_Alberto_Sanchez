@@ -32,7 +32,7 @@ public class PersonEditDialogController {
 	    @FXML
 	    private TextField puesto2;
 	    
-	 private Stage dialogStage;
+	    private Stage dialogStage;
 	    private Persona person;
 	    private boolean okClicked = false;
 	    
@@ -46,7 +46,7 @@ public class PersonEditDialogController {
 	        firstName2.setText(person.getFirstName());
 	        lastName2.setText(person.getLastName());
 	        telefono2.setText(Integer.toString(person.getTelefono()));
-	        mascuRadButton2.setText(person.getGenero());
+	        mascuRadButton2.setSelected(true);
 	        puesto2.setText(person.getPuesto());
 	        direcciones2.setText(person.getDireccion());
 	        email2.setText(person.getEmail());
@@ -63,7 +63,7 @@ public class PersonEditDialogController {
 	             person.setFirstName(firstName2.getText());
 	             person.setLastName(lastName2.getText());
 	             person.setTelefono(Integer.parseInt(telefono2.getText()));
-	             person.setGenero(mascuRadButton2.getText());
+	             person.setGenero("masculino");
 	             person.setPuesto(puesto2.getText());
 	             person.setDireccion(direcciones2.getText());
 	             person.setEmail(email2.getText());
