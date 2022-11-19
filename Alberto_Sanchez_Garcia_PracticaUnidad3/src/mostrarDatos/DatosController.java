@@ -85,6 +85,22 @@ public class DatosController {
     
     @FXML
     private TextField telefonoField;
+    
+    @FXML
+    private TextField nombreProField;
+    @FXML
+    private TextField tipoField;
+    
+    @FXML
+    private TextField precioField;
+    
+    @FXML
+    private TextField procedenciaField;
+    
+    @FXML
+    private TextField codigoField;
+    
+    
    
    /* private ObservableList<Persona> dataEmpleados = FXCollections.observableArrayList(
     	    new Persona("Alberto", "Sanchez" ,620141444, "C/asdasdasdasdas", "Alberto.smith@example.com"),
@@ -136,7 +152,8 @@ public class DatosController {
     	
     	listaNombresEmpleados.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> showPersonDetails(newValue));
-        
+    	listaNombresProducto.getSelectionModel().selectedItemProperty().addListener(
+                (observable, oldValue, newValue) -> showProductosDetails(newValue));
         TreeItem<String> rootItem=new TreeItem<String>("Puestos");
 		TreeItem<String> encargado=new TreeItem<String>("Encargado");
 		TreeItem<String> Marke=new TreeItem<String>("Marketing");	
@@ -187,15 +204,31 @@ public class DatosController {
         	direccionField.setText(person.getDireccion());
         	emailField.setText(person.getEmail());
             
-        } /*else {
+        } else {
             // Person is null, remove all the text.
-        	//firstNameField.setText("");
+        	firstNameField.setText("");
         	lastNameField.setText("");
         	telefonoField.setText("");
         	direccionField.setText("");
         	emailField.setText("");
             
-        }*/
+        }
+    }
+    private void showProductosDetails(Productos produc) {
+    	
+    	if(produc!=null) {
+    	   nombreProField.setText(produc.getFirstName());
+     	   tipoField.setText(produc.getTipo());
+     	   precioField.setText(Double.toString(produc.getPrecio())+"€");
+     	   procedenciaField.setText(produc.getProcedencia());
+     	   codigoField.setText(produc.getCodigo());
+    	}else {
+    	   nombreProField.setText("");
+    	   tipoField.setText("");
+    	   precioField.setText("");
+    	   procedenciaField.setText("");
+    	   codigoField.setText("");
+    	}
     }
     
 

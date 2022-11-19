@@ -218,27 +218,27 @@
                                     <Insets left="10.0" />
                                  </padding>
                               </Label>
-                              <TextField editable="false" prefHeight="25.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                              <TextField fx:id="nombreProField" editable="false" prefHeight="25.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                  <opaqueInsets>
                                     <Insets />
                                  </opaqueInsets>
                               </TextField>
-                              <TextField editable="false" layoutX="243.0" layoutY="154.0" prefHeight="25.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                              <TextField fx:id="tipoField" editable="false" layoutX="243.0" layoutY="154.0" prefHeight="25.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                  <opaqueInsets>
                                     <Insets />
                                  </opaqueInsets>
                               </TextField>
-                              <TextField editable="false" layoutX="243.0" layoutY="258.0" prefHeight="25.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                              <TextField fx:id="precioField" editable="false" layoutX="243.0" layoutY="258.0" prefHeight="25.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                  <opaqueInsets>
                                     <Insets />
                                  </opaqueInsets>
                               </TextField>
-                              <TextField editable="false" layoutX="243.0" layoutY="361.0" prefHeight="25.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                              <TextField fx:id="procedenciaField" editable="false" layoutX="243.0" layoutY="361.0" prefHeight="25.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                                  <opaqueInsets>
                                     <Insets />
                                  </opaqueInsets>
                               </TextField>
-                              <TextField editable="false" layoutX="243.0" layoutY="464.0" prefHeight="25.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                              <TextField fx:id="codigoField" editable="false" layoutX="243.0" layoutY="464.0" prefHeight="25.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
                                  <opaqueInsets>
                                     <Insets />
                                  </opaqueInsets>

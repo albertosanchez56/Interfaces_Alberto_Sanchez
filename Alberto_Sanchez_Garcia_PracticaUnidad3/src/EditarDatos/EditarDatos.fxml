@@ -28,7 +28,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="750.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EditarDatos.EditarDatosController">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="750.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EditarDatos.EditarDatosController">
   <tabs>
     <Tab text="Empleados">
       <content>
@@ -258,27 +258,27 @@
                                                             <Insets left="10.0" />
                                                          </padding>
                                                       </Label>
-                                                      <TextField prefHeight="25.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                      <TextField fx:id="firstNameField" prefHeight="25.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                                          <opaqueInsets>
                                                             <Insets />
                                                          </opaqueInsets>
                                                       </TextField>
-                                                      <TextField layoutX="243.0" layoutY="154.0" prefHeight="25.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                      <TextField fx:id="lastNameField" layoutX="243.0" layoutY="154.0" prefHeight="25.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                                          <opaqueInsets>
                                                             <Insets />
                                                          </opaqueInsets>
                                                       </TextField>
-                                                      <TextField layoutX="243.0" layoutY="258.0" prefHeight="25.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                      <TextField fx:id="telefonoField" layoutX="243.0" layoutY="258.0" prefHeight="25.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                                          <opaqueInsets>
                                                             <Insets />
                                                          </opaqueInsets>
                                                       </TextField>
-                                                      <TextField layoutX="243.0" layoutY="361.0" prefHeight="25.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                                      <TextField fx:id="direccionField" layoutX="243.0" layoutY="361.0" prefHeight="25.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                                                          <opaqueInsets>
                                                             <Insets />
                                                          </opaqueInsets>
                                                       </TextField>
-                                                      <TextField layoutX="243.0" layoutY="464.0" prefHeight="25.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                                      <TextField fx:id="emailField" layoutX="243.0" layoutY="464.0" prefHeight="25.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
                                                          <opaqueInsets>
                                                             <Insets />
                                                          </opaqueInsets>
@@ -542,17 +542,17 @@
                                                             <Insets left="10.0" />
                                                          </padding>
                                                       </Label>
-                                                      <TextField prefHeight="25.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                      <TextField fx:id="nombreProField" prefHeight="25.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                                          <opaqueInsets>
                                                             <Insets />
                                                          </opaqueInsets>
                                                       </TextField>
-                                                      <TextField layoutX="243.0" layoutY="258.0" prefHeight="25.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                      <TextField fx:id="precioField" layoutX="243.0" layoutY="258.0" prefHeight="25.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                                          <opaqueInsets>
                                                             <Insets />
                                                          </opaqueInsets>
                                                       </TextField>
-                                                      <TextField layoutX="243.0" layoutY="464.0" prefHeight="25.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                                      <TextField fx:id="codigoField" layoutX="243.0" layoutY="464.0" prefHeight="25.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
                                                          <opaqueInsets>
                                                             <Insets />
                                                          </opaqueInsets>

@@ -15,8 +15,11 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.Separator;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+import javafx.scene.control.TreeView;
 import javafx.scene.control.cell.ComboBoxListCell;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Modality;
 
 public class EditarDatosController {
 
@@ -82,6 +85,42 @@ public class EditarDatosController {
     @FXML
     private TableColumn<Productos, String> tipoCol;
     
+    @FXML
+    private TreeView<String> tree1;
+
+    @FXML
+    private TreeView<String> tree2;
+    
+ 
+    
+    @FXML
+    private TextField direccionField;
+    
+    @FXML
+    private TextField emailField;
+    
+    @FXML
+    private TextField firstNameField;
+    
+    @FXML
+    private TextField lastNameField;
+    
+    @FXML
+    private TextField telefonoField;
+    
+    @FXML
+    private TextField nombreProField;
+    @FXML
+    private TextField tipoField;
+    
+    @FXML
+    private TextField precioField;
+    
+    @FXML
+    private TextField procedenciaField;
+    
+    @FXML
+    private TextField codigoField;
     
    
     
@@ -130,20 +169,24 @@ public class EditarDatosController {
     	procedenciaCol.setCellValueFactory(cellData -> cellData.getValue().procedenciaProperty());
     	codigoCol.setCellValueFactory(cellData -> cellData.getValue().codigoProperty());
     	
+    	listaNombresEmpleados.getSelectionModel().selectedItemProperty().addListener(
+                (observable, oldValue, newValue) -> showPersonDetails(newValue));
+    	listaNombresProducto.getSelectionModel().selectedItemProperty().addListener(
+                (observable, oldValue, newValue) -> showProductosDetails(newValue));
     	
     	
     	//listaNombresProducto.setItems(dataPro);
     	//listaNombresEmpleados.setItems(dataEmpleados);
 
-    	tipoCombo.setItems(FXCollections.observableArrayList("Consola","Periferico","Videojuego"));
-    	tipoCombo.setValue("Seleciona un tipo");
+    	//tipoCombo.setItems(FXCollections.observableArrayList("Consola","Periferico","Videojuego"));
+    	//tipoCombo.setValue("Seleciona un tipo");
     	
     	tipoCombo2.setItems(FXCollections.observableArrayList("Consola","Periferico","Videojuego"));
     	tipoCombo2.setValue("Seleciona un tipo");
     	
     	
-    	procedenciaCombo.setItems(FXCollections.observableArrayList("España","China","Portugal","India","Francia","Inglaterra"));
-    	procedenciaCombo.setValue("Seleciona un pais");
+    	//procedenciaCombo.setItems(FXCollections.observableArrayList("España","China","Portugal","India","Francia","Inglaterra"));
+    	//procedenciaCombo.setValue("Seleciona un pais");
     	
     	procedenciaCombo2.setItems(FXCollections.observableArrayList("España","China","Portugal","India","Francia","Inglaterra"));
     	procedenciaCombo2.setValue("Seleciona un pais");
@@ -176,5 +219,42 @@ public class EditarDatosController {
                
         // TODO Versión con map
         //personTable.setItems(this.mainApp.getMapData()); 
+    }
+    private void showPersonDetails(Persona person) {
+        if (person != null) {
+        	// Si el campo contiene datos, entonces se rellena la información
+        	firstNameField.setText(person.getFirstName());
+        	lastNameField.setText(person.getLastName());
+        	telefonoField.setText(Integer.toString(person.getTelefono()));
+        	direccionField.setText(person.getDireccion());
+        	emailField.setText(person.getEmail());
+            
+        } else {
+            // Person is null, remove all the text.
+        	firstNameField.setText("");
+        	lastNameField.setText("");
+        	telefonoField.setText("");
+        	direccionField.setText("");
+        	emailField.setText("");
+            
+        }
+    }
+    private void showProductosDetails(Productos produc) {
+    	
+    	if(produc!=null) {
+    	   nombreProField.setText(produc.getFirstName());
+    	   tipoCombo.setValue(produc.getTipo());
+    	  // tipoCombo.initModality(Modality.APPLICATION_MODAL);
+     	   precioField.setText(Double.toString(produc.getPrecio())+"€");
+     	  // procedenciaField.setText(produc.getProcedencia());
+     	  procedenciaCombo.setValue(produc.getProcedencia());
+     	   codigoField.setText(produc.getCodigo());
+    	}else {
+    	   nombreProField.setText("");
+    	   tipoField.setText("");
+    	   precioField.setText("");
+    	   procedenciaField.setText("");
+    	   codigoField.setText("");
+    	}
     }
 }
