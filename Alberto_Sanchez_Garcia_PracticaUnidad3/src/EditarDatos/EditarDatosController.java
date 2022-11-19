@@ -243,10 +243,12 @@ public class EditarDatosController {
     	
     	if(produc!=null) {
     	   nombreProField.setText(produc.getFirstName());
+    	   tipoCombo.setItems(FXCollections.observableArrayList("Consola","Periferico","Videojuego"));
     	   tipoCombo.setValue(produc.getTipo());
     	  // tipoCombo.initModality(Modality.APPLICATION_MODAL);
      	   precioField.setText(Double.toString(produc.getPrecio())+"€");
      	  // procedenciaField.setText(produc.getProcedencia());
+     	  procedenciaCombo.setItems(FXCollections.observableArrayList("España","China","Portugal","India","Francia","Inglaterra"));
      	  procedenciaCombo.setValue(produc.getProcedencia());
      	   codigoField.setText(produc.getCodigo());
     	}else {
