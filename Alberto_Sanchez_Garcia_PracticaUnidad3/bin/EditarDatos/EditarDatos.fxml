@@ -319,7 +319,7 @@
                                                       </Label>
                                                       <ListView fx:id="list1" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
                                                       <ComboBox fx:id="puestoCombo" prefHeight="25.0" prefWidth="236.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                                                      <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="283.0" text="Femenino" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                                      <RadioButton fx:id="femeRadButton" mnemonicParsing="false" prefHeight="17.0" prefWidth="283.0" text="Femenino" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="6">
                                                          <padding>
                                                             <Insets left="100.0" />
                                                          </padding>
@@ -327,7 +327,7 @@
                                                             <ToggleGroup fx:id="Opciones2" />
                                                          </toggleGroup>
                                                       </RadioButton>
-                                                      <RadioButton mnemonicParsing="false" text="Masculino" textFill="WHITE" toggleGroup="$Opciones2" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                      <RadioButton fx:id="mascuRadButton" mnemonicParsing="false" text="Masculino" textFill="WHITE" toggleGroup="$Opciones2" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                                                    </children>
                                                    <opaqueInsets>
                                                       <Insets right="10.0" />

@@ -12,16 +12,18 @@ public class Persona {
     private final SimpleIntegerProperty telefono;
     private final SimpleStringProperty direccion;
     private final SimpleStringProperty email;
+    private final SimpleStringProperty puesto;
+    private final SimpleStringProperty genero;
     
     
-    
-    
-	public Persona(String fName, String lName, Integer itelefono,String sdireccion, String email ) {
+	public Persona(String fName, String lName, Integer itelefono,String sdireccion, String email,String spuesto,String sgenero) {
         this.firstName = new SimpleStringProperty(fName);
         this.lastName = new SimpleStringProperty(lName);
         this.telefono = new SimpleIntegerProperty(itelefono);
         this.direccion = new SimpleStringProperty(sdireccion);
         this.email = new SimpleStringProperty(email);
+        this.puesto = new SimpleStringProperty(spuesto);
+        this.genero = new SimpleStringProperty(sgenero);
         
     }
 	public String getFirstName() {
@@ -58,6 +60,18 @@ public class Persona {
     public void setEmail(String sdireccion) {
         email.set(sdireccion);
     }
+    public String getPuesto() {
+        return puesto.get();
+    }
+    public void setPuesto(String sgenero) {
+    	puesto.set(sgenero);
+    }
+    public String getGenero() {
+        return genero.get();
+    }
+    public void setGenero(String spuesto) {
+    	genero.set(spuesto);
+    }
       
     public StringProperty firstNameProperty() {
 		return firstName;
@@ -77,6 +91,14 @@ public class Persona {
     public StringProperty emailProperty() {
     	return email;
     }
+    public StringProperty puestoProperty() {
+    	return puesto;
+    }
+    public StringProperty generoProperty() {
+    	return genero;
+    }
+      
+    
       
     
     

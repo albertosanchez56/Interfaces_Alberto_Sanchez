@@ -12,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListView;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.Separator;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -121,6 +122,11 @@ public class EditarDatosController {
     
     @FXML
     private TextField codigoField;
+    @FXML
+    private RadioButton femeRadButton;
+    
+    @FXML
+    private RadioButton mascuRadButton;
     
    
     
@@ -228,7 +234,13 @@ public class EditarDatosController {
         	telefonoField.setText(Integer.toString(person.getTelefono()));
         	direccionField.setText(person.getDireccion());
         	emailField.setText(person.getEmail());
-            
+        	puestoCombo.setItems(FXCollections.observableArrayList("Encargado","Manager","Contable"));
+        	puestoCombo.setValue(person.getPuesto());
+        	if(person.getGenero().equals("masculino")) {
+        		mascuRadButton.setSelected(true);
+        	}else {
+        		femeRadButton.setSelected(true);
+        	}
         } else {
             // Person is null, remove all the text.
         	firstNameField.setText("");
