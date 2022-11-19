@@ -9,9 +9,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TabPane;
+import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
@@ -27,6 +30,11 @@ public class MenuController {
     @FXML
     private URL location;
 
+    @FXML
+    private TextField correo2;
+    
+    @FXML
+    private TextField password2;
     @FXML
     void initialize() {
 
@@ -84,8 +92,35 @@ public class MenuController {
 
     @FXML
     void iniciarSesion(ActionEvent event) {
-    	rootLayout.setCenter(null);
-    	menu.setVisible(true);
+    	if(isInputValid()) {
+    		rootLayout.setCenter(null);
+        	menu.setVisible(true);
+        	
+    	}
+    	
+    	
+    }
+    private boolean isInputValid() {
+    	String errorMessage = "";
+    	if(correo2.getText()== null || correo2.getText().length() == 0) {
+    		errorMessage += "introduce un correo\n"; 
+    	}
+    	if(password2.getText()== null || password2.getText().length() == 0) {
+    		errorMessage += "introduce una contraseña\n"; 
+    	}
+    	if (errorMessage.length() == 0) {
+            return true;
+        } else {
+        	// Se muestra un alert si no se puede eliminar la fila
+    		Alert errorAlert = new Alert(AlertType.ERROR);
+        	
+    		errorAlert.setTitle("Hay campos incorrectos");
+    		errorAlert.setHeaderText("Por favor, rellena correctamente los campos");
+    		errorAlert.setContentText(errorMessage);
+    		
+    		errorAlert.showAndWait();
+            return false;
+        }
     }
     @FXML
     void cerrarFormulario(ActionEvent event) {
