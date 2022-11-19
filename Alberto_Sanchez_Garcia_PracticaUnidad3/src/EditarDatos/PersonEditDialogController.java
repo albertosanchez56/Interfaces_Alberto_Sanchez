@@ -46,7 +46,18 @@ public class PersonEditDialogController {
 	        firstName2.setText(person.getFirstName());
 	        lastName2.setText(person.getLastName());
 	        telefono2.setText(Integer.toString(person.getTelefono()));
-	        mascuRadButton2.setSelected(true);
+	        
+	        if(person.getGenero()!=null) {
+	        	if(person.getGenero().equals("masculino")&& person.getGenero()!=null) {
+		        	mascuRadButton2.setSelected(true);
+		        }else if(person.getGenero().equals("femenino")&& person.getGenero()!=null){
+		        	femeRadButton2.setSelected(true);
+		        }
+	        }else {
+	        	mascuRadButton2.setText("masculino");
+	        }
+	        
+	        
 	        puesto2.setText(person.getPuesto());
 	        direcciones2.setText(person.getDireccion());
 	        email2.setText(person.getEmail());
@@ -63,7 +74,12 @@ public class PersonEditDialogController {
 	             person.setFirstName(firstName2.getText());
 	             person.setLastName(lastName2.getText());
 	             person.setTelefono(Integer.parseInt(telefono2.getText()));
-	             person.setGenero("masculino");
+	             if(mascuRadButton2.isSelected()) {
+	            	 person.setGenero("masculino");
+	             }else {
+	            	 person.setGenero("femenino");
+	             }
+	            
 	             person.setPuesto(puesto2.getText());
 	             person.setDireccion(direcciones2.getText());
 	             person.setEmail(email2.getText());
@@ -83,13 +99,13 @@ public class PersonEditDialogController {
 	    	String errorMessage = "";
 	    	
 	    	if (firstName2.getText() == null || firstName2.getText().length() == 0) {
-	            errorMessage += "El campo first name está vacío\n"; 
+	            errorMessage += "El campo nombre está vacío\n"; 
 	        }
 	        if (lastName2.getText() == null || lastName2.getText().length() == 0) {
-	            errorMessage += "El campo last name está vacío\n"; 
+	            errorMessage += "El campo apellido está vacío\n"; 
 	        }
 	        if (telefono2.getText() == null || telefono2.getText().length() == 0) {
-	            errorMessage += "El campo postal code está vacío\n"; 
+	            errorMessage += "El campo telefono está vacío\n"; 
 	        } else {
 	            // Se intenta convertir el código postal en entero y si da un error se muestra un mensaje
 	            try {
@@ -99,10 +115,13 @@ public class PersonEditDialogController {
 	            }
 	        }
 	        if (direcciones2.getText() == null || direcciones2.getText().length() == 0) {
-	            errorMessage += "El campo street está vacío\n"; 
+	            errorMessage += "El campo direccion está vacío\n"; 
 	        }
 	        if (email2.getText() == null || email2.getText().length() == 0) {
-	            errorMessage += "El campo street está vacío\n"; 
+	            errorMessage += "El campo emnail está vacío\n"; 
+	        }
+	        if (puesto2.getText() == null || puesto2.getText().length() == 0) {
+	            errorMessage += "El campo puesto está vacío\n"; 
 	        }
 
 	        if (errorMessage.length() == 0) {
