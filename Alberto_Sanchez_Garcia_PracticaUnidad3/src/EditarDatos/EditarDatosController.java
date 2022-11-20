@@ -1,8 +1,15 @@
 package EditarDatos;
 
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import Clases.Persona;
 import Clases.Productos;
 import application.Main;
@@ -24,9 +31,11 @@ import javafx.scene.control.TreeView;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.cell.ComboBoxListCell;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.DragEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-
+import javafx.scene.input.TransferMode;
 public class EditarDatosController {
 
 	public static final ObservableList<String> names = 
@@ -134,7 +143,8 @@ public class EditarDatosController {
     private RadioButton mascuRadButton;
     
     
-  
+    @FXML
+	private ImageView imageView;
    /* private ObservableList<Persona> dataEmpleados = FXCollections.observableArrayList(
     	    new Persona("Alberto", "Sanchez" ,620141444, "C/asdasdasdasdas", "Alberto.smith@example.com"),
     	    new Persona("Lucia", "Garcia" ,51566115, "C/asdasdasdasdas", "Lucia.smith@example.com"),
@@ -233,6 +243,18 @@ public class EditarDatosController {
                
         // TODO Versión con map
         //personTable.setItems(this.mainApp.getMapData()); 
+    }
+    @FXML
+    private void handleDialogOver(DragEvent event) {
+    	if (event.getDragboard().hasFiles()) {
+    		event.acceptTransferModes(TransferMode.MOVE);
+    	}
+    }
+    @FXML
+    private void handleDrop(DragEvent event) throws FileNotFoundException {
+    	List<File> files = event.getDragboard().getFiles();
+    	Image img = new Image(new FileInputStream(files.get(0)));
+    	imageView.setImage(img);
     }
     
   

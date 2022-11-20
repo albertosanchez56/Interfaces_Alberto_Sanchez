@@ -83,7 +83,7 @@ public class ProductEditDialogController {
 	            errorMessage += "El campo apellido está vacío\n"; 
 	        }
 	        if (precio3.getText() == null || precio3.getText().length() == 0) {
-	            errorMessage += "El campo telefono está vacío\n"; 
+	            errorMessage += "El campo precio está vacío\n"; 
 	        } else {
 	            // Se intenta convertir el código postal en entero y si da un error se muestra un mensaje
 	            try {
@@ -93,10 +93,10 @@ public class ProductEditDialogController {
 	            }
 	        }
 	        if (procedencia3.getText() == null || procedencia3.getText().length() == 0) {
-	            errorMessage += "El campo direccion está vacío\n"; 
+	            errorMessage += "El campo procedencia está vacío\n"; 
 	        }
 	        if (codigo3.getText() == null || codigo3.getText().length() == 0) {
-	            errorMessage += "El campo emnail está vacío\n"; 
+	            errorMessage += "El campo codigo está vacío\n"; 
 	        }
 	        
 	        if (errorMessage.length() == 0) {

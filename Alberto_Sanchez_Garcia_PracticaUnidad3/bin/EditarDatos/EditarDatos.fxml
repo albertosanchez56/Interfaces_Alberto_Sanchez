@@ -359,7 +359,7 @@
                                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                        </rowConstraints>
                                        <children>
-                                          <ImageView fitHeight="143.0" fitWidth="208.0" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fx:id="imageView" fitHeight="143.0" fitWidth="208.0" onDragDropped="#handleDrop" onDragOver="#handleDialogOver" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@../img/Captura.PNG" />
                                              </image>
@@ -436,6 +436,11 @@
                                                 <Insets bottom="30.0" left="30.0" />
                                              </GridPane.margin>
                                           </Button>
+                                          <Label prefHeight="53.0" prefWidth="184.0" text="Inserta la imagen del producto" GridPane.columnIndex="1">
+                                             <GridPane.margin>
+                                                <Insets left="20.0" />
+                                             </GridPane.margin>
+                                          </Label>
                                        </children>
                                        <opaqueInsets>
                                           <Insets right="10.0" />

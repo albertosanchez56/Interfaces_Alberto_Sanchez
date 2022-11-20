@@ -119,7 +119,7 @@ public class PersonEditDialogController {
 	            errorMessage += "El campo direccion está vacío\n"; 
 	        }
 	        if (email2.getText() == null || email2.getText().length() == 0) {
-	            errorMessage += "El campo emnail está vacío\n"; 
+	            errorMessage += "El campo email está vacío\n"; 
 	        }
 	        if (puesto2.getText() == null || puesto2.getText().length() == 0) {
 	            errorMessage += "El campo puesto está vacío\n"; 
