@@ -1,7 +1,10 @@
 package mostrarDatos;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+
 import application.Main;
 import Clases.Persona;
 import Clases.Productos;
@@ -10,6 +13,7 @@ import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -17,6 +21,13 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.scene.Scene;
+import javafx.scene.chart.PieChart;
+
+import javafx.event.ActionEvent;
 
 public class DatosController {
 
@@ -99,6 +110,8 @@ public class DatosController {
     
     @FXML
     private TextField codigoField;
+    @FXML
+    private PieChart PieChart;
     
     
    
@@ -121,6 +134,7 @@ public class DatosController {
     	);*/
     @FXML
     void initialize() {
+    	
        
     	
     	/*nombreProduc.setCellValueFactory(new PropertyValueFactory<Productos,String>("firstName"));
@@ -181,10 +195,37 @@ public class DatosController {
         	//listaNombresEmpleados.setItems(dataEmpleados);
         	//listaNombresProducto.setItems(dataPro);
     	
+			
     	
     	
     }
    
+    @FXML
+    void graficoIni(ActionEvent event) {
+    	try {
+    		// Cargamos el diseño del diálogo desde un XML
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(DatosController.class.getResource("/graficos/precioProductoGraph.fxml"));
+            AnchorPane dialogo = (AnchorPane) loader.load();
+
+            // Se crea un nuevo Stage para mostrar el diálogo
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Precios");
+            dialogStage.initModality(Modality.APPLICATION_MODAL);
+            dialogStage.setResizable(false);
+                    
+            Scene scene = new Scene(dialogo);
+            dialogStage.setScene(scene);   
+            
+           			        
+            // Muestra el diálogo y no continúa el código hasta que lo cierra el usuario
+            dialogStage.showAndWait(); 
+    	} catch (IOException e) {
+	        e.printStackTrace();
+	        
+	    }
+    }
+    
     
     public void setMainApp(Main mainApp) {
         this.mainApp = mainApp;

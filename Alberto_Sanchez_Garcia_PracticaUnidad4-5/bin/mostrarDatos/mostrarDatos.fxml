@@ -18,7 +18,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="750.0" style="-fx-background-color: #606060;" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mostrarDatos.DatosController">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="750.0" style="-fx-background-color: #606060;" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mostrarDatos.DatosController">
   <tabs>
     <Tab text="Empleados">
          <content>
@@ -243,6 +243,7 @@
                                     <Insets />
                                  </opaqueInsets>
                               </TextField>
+                              <Button mnemonicParsing="false" onAction="#graficoIni" text="Graficos" GridPane.columnIndex="1" />
                            </children>
                            <opaqueInsets>
                               <Insets right="10.0" />
