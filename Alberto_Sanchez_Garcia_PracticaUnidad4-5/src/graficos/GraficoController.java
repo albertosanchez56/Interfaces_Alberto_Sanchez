@@ -34,8 +34,9 @@ public class GraficoController {
     @FXML
     void initialize() {
     	for(int i=0; i<listapro.size();i++) {
+    		PieChart.Data ia= new PieChart.Data(listapro.get(i).getFirstName().toString(), listapro.get(i).getPrecio());
     		ObservableList<PieChart.Data> pieChartData =
-            		FXCollections.observableArrayList(new PieChart.Data(listapro.get(i).getFirstName().toString(), listapro.get(i).getPrecio()));
+            		FXCollections.observableArrayList(ia);
         	PieChart.setData(pieChartData);
     	}
     	
