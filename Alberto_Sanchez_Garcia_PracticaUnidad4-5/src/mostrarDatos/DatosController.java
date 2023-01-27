@@ -114,7 +114,7 @@ public class DatosController {
     @FXML
     private TextField codigoField;
     @FXML
-    private PieChart PieChart;
+    private PieChart pieChart;
     private List<Productos> listapro = new ArrayList<>();
     
    
@@ -136,7 +136,7 @@ public class DatosController {
     	   
     	);*/
     @FXML
-    void initialize() {
+    void initialize(){
     	
        
     	
@@ -197,21 +197,9 @@ public class DatosController {
         	
         	//listaNombresEmpleados.setItems(dataEmpleados);
         	//listaNombresProducto.setItems(dataPro);
+			
     	
-			ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList();
-	    	for(int i=0; i<listapro.size();i++) {
-	    		PieChart.Data pie= new PieChart.Data(listapro.get(i).getFirstName(), listapro.get(i).getPrecio());
-	    		
-	    		pieChartData.add(pie);
-	    		System.out.println(listapro.get(i).getFirstName());
-	        	
-	    	}
-	    	PieChart.setData(pieChartData);
-	    	
-	    	for (final PieChart.Data data : PieChart.getData()) {
-			    data.setName(data.getName() + "=" + data.getPieValue());
-			}
-    	
+			
     	
     }
    
@@ -231,7 +219,7 @@ public class DatosController {
                     
             Scene scene = new Scene(dialogo);
             dialogStage.setScene(scene);   
-            DatosController controller = loader.getController();
+            GraficoController controller = loader.getController();
 	        controller.setMainApp(this.mainApp);
             
            			        
@@ -250,9 +238,45 @@ public class DatosController {
         listaNombresEmpleados.setItems(this.mainApp.getPersonData());
         listaNombresProducto.setItems(this.mainApp.getProductosData());
         listapro.addAll(this.mainApp.getProductosData());
-               
+               System.out.println(listaNombresEmpleados);
+               System.out.println(listapro.toString());
         // TODO Versión con map
         //personTable.setItems(this.mainApp.getMapData()); 
+    }
+    
+    public void showProductosPrecio(PieChart pieChart) {
+    	if(pieChart!=null) {
+			ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList();
+	    	for(int i=0; i<listapro.size();i++) {
+	    		PieChart.Data pie= new PieChart.Data(listapro.get(i).getFirstName(), listapro.get(i).getPrecio());
+	    		
+	    		pieChartData.add(pie);
+	    		System.out.println(listapro.get(i).getFirstName());
+	        	
+	    	}
+	    	pieChart.setData(pieChartData);
+	    	
+	    	for (final PieChart.Data data : pieChart.getData()) {
+			    data.setName(data.getName() + "=" + data.getPieValue());
+			}
+    	
+		}else {
+			ObservableList<PieChart.Data> pieChartData =
+	        		FXCollections.observableArrayList(
+	        		 new PieChart.Data("DIW", 7),
+	        		 new PieChart.Data("DI", 6),
+	        		 new PieChart.Data("PSP", 8),
+	        		 new PieChart.Data("PDM", 5),
+	        		 new PieChart.Data("AD", 6),
+	        		 new PieChart.Data("SGE", 4),
+	        		 new PieChart.Data("DWEC", 10),
+	        		 new PieChart.Data("DWES", 3));
+			pieChart.setData(pieChartData);
+	    	
+	    	for (final PieChart.Data data : pieChart.getData()) {
+			    data.setName(data.getName() + "=" + data.getPieValue());
+			}
+		}
     }
     private void showPersonDetails(Persona person) {
         if (person != null) {

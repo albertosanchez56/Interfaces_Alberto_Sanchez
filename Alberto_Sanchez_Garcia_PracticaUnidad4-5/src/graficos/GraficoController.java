@@ -13,6 +13,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.PieChart;
+import mostrarDatos.DatosController;
 
 public class GraficoController {
 
@@ -33,6 +34,9 @@ public class GraficoController {
     private List<Productos> listapro = new ArrayList<>();
     @FXML
     void initialize() {
+    	
+       /* DatosController datosController= new DatosController();
+        datosController.showProductosPrecio(PieChart);*/
     	ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList();
     	for(int i=0; i<listapro.size();i++) {
     		PieChart.Data pie= new PieChart.Data(listapro.get(i).getFirstName().toString(), listapro.get(i).getPrecio());
@@ -52,7 +56,7 @@ public class GraficoController {
 
         //listaNombresEmpleados.setItems(this.mainApp.getPersonData());
         listapro.addAll(this.mainApp.getProductosData());
-       // System.out.println(listapro);
+        System.out.println(listapro);
                
         // TODO Versión con map
         //personTable.setItems(this.mainApp.getMapData()); 
