@@ -49,6 +49,7 @@ public class MenuController {
 			
 			DatosController datos=loader.getController();
 			datos.setMainApp(main);
+			
 			// Se sitúa en el centro del diseño principal
 			rootLayout.setCenter(listadoControles);
 		} catch (IOException e) {

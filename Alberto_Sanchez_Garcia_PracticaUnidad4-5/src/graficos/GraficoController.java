@@ -24,7 +24,7 @@ public class GraficoController {
     private URL location;
 
     @FXML
-    private PieChart PieChart;
+    private PieChart pieChart;
     
     @FXML
     private LineChart<String, Number> LineChart;
@@ -37,6 +37,8 @@ public class GraficoController {
     	
        /* DatosController datosController= new DatosController();
         datosController.showProductosPrecio(PieChart);*/
+    	
+    	if(pieChart!=null) {
     	ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList();
     	for(int i=0; i<listapro.size();i++) {
     		PieChart.Data pie= new PieChart.Data(listapro.get(i).getFirstName().toString(), listapro.get(i).getPrecio());
@@ -45,10 +47,27 @@ public class GraficoController {
     		System.out.println(listapro.get(i).getFirstName());
         	
     	}
-    	PieChart.setData(pieChartData);
+    	pieChart.setData(pieChartData);
     	
-    	for (final PieChart.Data data : PieChart.getData()) {
+    	for (final PieChart.Data data : pieChart.getData()) {
 		    data.setName(data.getName() + "=" + data.getPieValue());
+		}
+    	}else {
+			ObservableList<PieChart.Data> pieChartData =
+	        		FXCollections.observableArrayList(
+	        		 new PieChart.Data("DIW", 7),
+	        		 new PieChart.Data("DI", 6),
+	        		 new PieChart.Data("PSP", 8),
+	        		 new PieChart.Data("PDM", 5),
+	        		 new PieChart.Data("AD", 6),
+	        		 new PieChart.Data("SGE", 4),
+	        		 new PieChart.Data("DWEC", 10),
+	        		 new PieChart.Data("DWES", 3));
+			pieChart.setData(pieChartData);
+	    	
+	    	for (final PieChart.Data data : pieChart.getData()) {
+			    data.setName(data.getName() + "=" + data.getPieValue());
+			}
 		}
     }
     public void setMainApp(Main mainApp) {
@@ -56,6 +75,7 @@ public class GraficoController {
 
         //listaNombresEmpleados.setItems(this.mainApp.getPersonData());
         listapro.addAll(this.mainApp.getProductosData());
+        System.out.println(listapro);
         System.out.println(listapro);
                
         // TODO Versión con map
