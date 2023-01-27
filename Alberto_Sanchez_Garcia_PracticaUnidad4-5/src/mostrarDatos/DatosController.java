@@ -2,10 +2,13 @@ package mostrarDatos;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 
 import application.Main;
+import graficos.GraficoController;
 import Clases.Persona;
 import Clases.Productos;
 import javafx.beans.property.SimpleIntegerProperty;
@@ -112,7 +115,7 @@ public class DatosController {
     private TextField codigoField;
     @FXML
     private PieChart PieChart;
-    
+    private List<Productos> listapro = new ArrayList<>();
     
    
    /* private ObservableList<Persona> dataEmpleados = FXCollections.observableArrayList(
@@ -195,7 +198,19 @@ public class DatosController {
         	//listaNombresEmpleados.setItems(dataEmpleados);
         	//listaNombresProducto.setItems(dataPro);
     	
-			
+			ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList();
+	    	for(int i=0; i<listapro.size();i++) {
+	    		PieChart.Data pie= new PieChart.Data(listapro.get(i).getFirstName(), listapro.get(i).getPrecio());
+	    		
+	    		pieChartData.add(pie);
+	    		System.out.println(listapro.get(i).getFirstName());
+	        	
+	    	}
+	    	PieChart.setData(pieChartData);
+	    	
+	    	for (final PieChart.Data data : PieChart.getData()) {
+			    data.setName(data.getName() + "=" + data.getPieValue());
+			}
     	
     	
     }
@@ -216,6 +231,8 @@ public class DatosController {
                     
             Scene scene = new Scene(dialogo);
             dialogStage.setScene(scene);   
+            DatosController controller = loader.getController();
+	        controller.setMainApp(this.mainApp);
             
            			        
             // Muestra el diálogo y no continúa el código hasta que lo cierra el usuario
@@ -232,6 +249,7 @@ public class DatosController {
 
         listaNombresEmpleados.setItems(this.mainApp.getPersonData());
         listaNombresProducto.setItems(this.mainApp.getProductosData());
+        listapro.addAll(this.mainApp.getProductosData());
                
         // TODO Versión con map
         //personTable.setItems(this.mainApp.getMapData()); 

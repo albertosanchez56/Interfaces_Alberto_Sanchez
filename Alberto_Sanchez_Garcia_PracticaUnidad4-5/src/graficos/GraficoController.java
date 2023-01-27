@@ -33,13 +33,15 @@ public class GraficoController {
     private List<Productos> listapro = new ArrayList<>();
     @FXML
     void initialize() {
+    	ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList();
     	for(int i=0; i<listapro.size();i++) {
-    		PieChart.Data ia= new PieChart.Data(listapro.get(i).getFirstName().toString(), listapro.get(i).getPrecio());
-    		ObservableList<PieChart.Data> pieChartData =
-            		FXCollections.observableArrayList(ia);
-        	PieChart.setData(pieChartData);
+    		PieChart.Data pie= new PieChart.Data(listapro.get(i).getFirstName().toString(), listapro.get(i).getPrecio());
+    		
+    		pieChartData.add(pie);
+    		System.out.println(listapro.get(i).getFirstName());
+        	
     	}
-    	
+    	PieChart.setData(pieChartData);
     	
     	for (final PieChart.Data data : PieChart.getData()) {
 		    data.setName(data.getName() + "=" + data.getPieValue());
@@ -50,7 +52,7 @@ public class GraficoController {
 
         //listaNombresEmpleados.setItems(this.mainApp.getPersonData());
         listapro.addAll(this.mainApp.getProductosData());
-        System.out.println(listapro);
+       // System.out.println(listapro);
                
         // TODO Versión con map
         //personTable.setItems(this.mainApp.getMapData()); 
