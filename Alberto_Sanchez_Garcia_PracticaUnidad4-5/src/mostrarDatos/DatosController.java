@@ -244,7 +244,7 @@ public class DatosController {
         //personTable.setItems(this.mainApp.getMapData()); 
     }
     
-    public void showProductosPrecio(PieChart pieChart) {
+    /*public void showProductosPrecio(PieChart pieChart) {
     	if(pieChart!=null) {
 			ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList();
 	    	for(int i=0; i<listapro.size();i++) {
@@ -277,7 +277,7 @@ public class DatosController {
 			    data.setName(data.getName() + "=" + data.getPieValue());
 			}
 		}
-    }
+    }*/
     private void showPersonDetails(Persona person) {
         if (person != null) {
         	// Si el campo contiene datos, entonces se rellena la información

@@ -38,8 +38,8 @@ public class GraficoController {
        /* DatosController datosController= new DatosController();
         datosController.showProductosPrecio(PieChart);*/
     	
-    	if(pieChart!=null) {
-    	ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList();
+    	//if(pieChart!=null) {
+    	/*ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList();
     	for(int i=0; i<listapro.size();i++) {
     		PieChart.Data pie= new PieChart.Data(listapro.get(i).getFirstName().toString(), listapro.get(i).getPrecio());
     		
@@ -52,7 +52,7 @@ public class GraficoController {
     	for (final PieChart.Data data : pieChart.getData()) {
 		    data.setName(data.getName() + "=" + data.getPieValue());
 		}
-    	}else {
+    	}/*else {
 			ObservableList<PieChart.Data> pieChartData =
 	        		FXCollections.observableArrayList(
 	        		 new PieChart.Data("DIW", 7),
@@ -68,7 +68,7 @@ public class GraficoController {
 	    	for (final PieChart.Data data : pieChart.getData()) {
 			    data.setName(data.getName() + "=" + data.getPieValue());
 			}
-		}
+		}*/
     }
     public void setMainApp(Main mainApp) {
         this.mainApp = mainApp;
