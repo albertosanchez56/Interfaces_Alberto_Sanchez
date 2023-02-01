@@ -31,12 +31,6 @@
                   <MenuItem mnemonicParsing="false" onAction="#cerrarFormularioEditar" style="-fx-text-fill: #404040;" text="Cerrar" />
             </items>
           </Menu>
-            <Menu mnemonicParsing="false" text="Graficos">
-              <items>
-                  <MenuItem mnemonicParsing="false" onAction="#abrirGrafico" text="Abrir" />
-                <MenuItem mnemonicParsing="false" onAction="#cerrarGrafico" text="Cerrar" />
-              </items>
-            </Menu>
           <Menu mnemonicParsing="false" text="Ayuda">
             <items>
               <MenuItem mnemonicParsing="false" onAction="#abrirAyuda" style="-fx-text-fill: #404040;" text="funcionamiento" />

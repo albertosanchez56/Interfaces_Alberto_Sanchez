@@ -243,7 +243,11 @@
                                     <Insets />
                                  </opaqueInsets>
                               </TextField>
-                              <Button mnemonicParsing="false" onAction="#graficoIni" text="Graficos" GridPane.columnIndex="1" />
+                              <Button mnemonicParsing="false" onAction="#graficoIni" text="Graficos" GridPane.columnIndex="1">
+                                 <GridPane.margin>
+                                    <Insets left="70.0" />
+                                 </GridPane.margin>
+                              </Button>
                            </children>
                            <opaqueInsets>
                               <Insets right="10.0" />

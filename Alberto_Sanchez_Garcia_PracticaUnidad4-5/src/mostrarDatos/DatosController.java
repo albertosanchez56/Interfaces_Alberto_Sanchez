@@ -8,6 +8,7 @@ import java.util.ResourceBundle;
 
 
 import application.Main;
+import application.MenuController;
 import graficos.GraficoController;
 import Clases.Persona;
 import Clases.Productos;
@@ -18,6 +19,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TabPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -202,14 +204,15 @@ public class DatosController {
 			
     	
     }
-   
+    
     @FXML
     void graficoIni(ActionEvent event) {
     	try {
     		// Cargamos el diseño del diálogo desde un XML
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(DatosController.class.getResource("/graficos/precioProductoGraph.fxml"));
-            AnchorPane dialogo = (AnchorPane) loader.load();
+            loader.setLocation(DatosController.class.getResource("/graficos/graficos.fxml"));
+            TabPane dialogo = (TabPane) loader.load();
+            dialogo.getStylesheets().add(getClass().getResource("/application/application.css").toExternalForm());
 
             // Se crea un nuevo Stage para mostrar el diálogo
             Stage dialogStage = new Stage();
@@ -220,12 +223,15 @@ public class DatosController {
             Scene scene = new Scene(dialogo);
             dialogStage.setScene(scene);   
             GraficoController controller = loader.getController();
-	        controller.setMainApp(this.mainApp);
+            controller.setPieData(mainApp.loadPieData());
+            controller.initPieChart();
+          
 	        
             
            			        
             // Muestra el diálogo y no continúa el código hasta que lo cierra el usuario
             dialogStage.showAndWait(); 
+            
     	} catch (IOException e) {
 	        e.printStackTrace();
 	        
@@ -245,40 +251,7 @@ public class DatosController {
         //personTable.setItems(this.mainApp.getMapData()); 
     }
     
-    /*public void showProductosPrecio(PieChart pieChart) {
-    	if(pieChart!=null) {
-			ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList();
-	    	for(int i=0; i<listapro.size();i++) {
-	    		PieChart.Data pie= new PieChart.Data(listapro.get(i).getFirstName(), listapro.get(i).getPrecio());
-	    		
-	    		pieChartData.add(pie);
-	    		System.out.println(listapro.get(i).getFirstName());
-	        	
-	    	}
-	    	pieChart.setData(pieChartData);
-	    	
-	    	for (final PieChart.Data data : pieChart.getData()) {
-			    data.setName(data.getName() + "=" + data.getPieValue());
-			}
-    	
-		}else {
-			ObservableList<PieChart.Data> pieChartData =
-	        		FXCollections.observableArrayList(
-	        		 new PieChart.Data("DIW", 7),
-	        		 new PieChart.Data("DI", 6),
-	        		 new PieChart.Data("PSP", 8),
-	        		 new PieChart.Data("PDM", 5),
-	        		 new PieChart.Data("AD", 6),
-	        		 new PieChart.Data("SGE", 4),
-	        		 new PieChart.Data("DWEC", 10),
-	        		 new PieChart.Data("DWES", 3));
-			pieChart.setData(pieChartData);
-	    	
-	    	for (final PieChart.Data data : pieChart.getData()) {
-			    data.setName(data.getName() + "=" + data.getPieValue());
-			}
-		}
-    }*/
+    
     private void showPersonDetails(Persona person) {
         if (person != null) {
         	// Si el campo contiene datos, entonces se rellena la información

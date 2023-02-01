@@ -12,3 +12,13 @@
 .choice.box .label{
 	-fx-text-fill: #404040;
 }
+#pieC{
+	-fx-text-fill: black;
+}
+
+.chart-legend{
+	 -fx-background-color: #333;
+}
+.chart{
+	-fx-background-color: #606060;
+}

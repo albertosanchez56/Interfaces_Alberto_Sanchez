@@ -74,7 +74,7 @@ public class MenuController {
 			e.printStackTrace();
 		}
     }
-    @FXML
+   /* @FXML
     void abrirGrafico(ActionEvent event) {
     	try {
 			// Cargamos el archivo Controles Dinámicos
@@ -94,7 +94,7 @@ public class MenuController {
     @FXML
     void cerrarGrafico(ActionEvent event) {
     	rootLayout.setCenter(null);	
-    }
+    }*/
 
     @FXML
     void abrirAyuda(ActionEvent event) {

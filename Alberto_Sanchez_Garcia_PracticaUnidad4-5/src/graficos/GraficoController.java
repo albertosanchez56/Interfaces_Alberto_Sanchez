@@ -41,13 +41,21 @@ public class GraficoController {
     }
     
     	public void initPieChart() {
-    		pieChart.setData(pieData);
-		
-		// Se muestra en cada etiqueta el valor
-    		for (final PieChart.Data data : pieChart.getData()) {
-    			data.setName(data.getName() + "=" + data.getPieValue());
-    		}
-    	}
+  
+    		
+    			pieChart.setData(pieData);
+    		
+    				
+    			
+    			// Se muestra en cada etiqueta el valor
+    	    		for (final PieChart.Data data : pieChart.getData()) {
+    	    			data.setName(data.getName() + "=" + data.getPieValue()+"€");
+    	    		}
+    	    	}
+    		
+    			
+    		
+    		
     	public PieChart getPieChart() {
     		return pieChart;
     	}

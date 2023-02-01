@@ -15,6 +15,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.chart.PieChart;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.MenuBar;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -146,20 +147,28 @@ public class Main extends Application {
 		    }
 		}
 		public ObservableList<PieChart.Data> loadPieData(){
+			listapro=new ArrayList<>();
 			listapro.addAll(getProductosData());
 			// Rellenamos los datos del gr�fico
 			ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList();
-	    	for(int i=0; i<listapro.size();i++) {
+		
+			for(int i=0; i<listapro.size();i++) {
 	    		PieChart.Data pie= new PieChart.Data(listapro.get(i).getFirstName().toString(), listapro.get(i).getPrecio());
 	    		
 	    		pieChartData.add(pie);
 	    		System.out.println(listapro.get(i).getFirstName());
-	        	
-	    	}
-	    	
-	    
-			
+	        		
+		
+		}
+				
 			return pieChartData;
+		}
+		public XYChart.Series<Integer, Integer> loadBubbleData(){
+			
+			XYChart.Series<Integer, Integer> bubbleData=  new XYChart.Series<Integer, Integer>();
+			
+
+			return bubbleData;
 		}
 		
 		public static void main(String[] args) {

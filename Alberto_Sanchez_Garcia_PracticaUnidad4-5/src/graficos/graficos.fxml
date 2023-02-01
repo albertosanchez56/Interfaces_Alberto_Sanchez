@@ -8,11 +8,11 @@
 
 <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="750.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graficos.GraficoController">
    <tabs>
-      <Tab text="PieChart">
+      <Tab text="Precio de los productos">
          <content>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <PieChart fx:id="pieChart" prefHeight="624.0" prefWidth="750.0" title="Precios" />
+                  <PieChart id="pieC" fx:id="pieChart" legendSide="LEFT" prefHeight="624.0" prefWidth="750.0" title=" Precios de los productos" />
                </children>
             </AnchorPane>
          </content>
