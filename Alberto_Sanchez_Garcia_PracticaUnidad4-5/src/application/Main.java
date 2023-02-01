@@ -163,9 +163,17 @@ public class Main extends Application {
 				
 			return pieChartData;
 		}
-		public XYChart.Series<Integer, Integer> loadBubbleData(){
+		public XYChart.Series<Integer, String> loadBubbleData(){
 			
-			XYChart.Series<Integer, Integer> bubbleData=  new XYChart.Series<Integer, Integer>();
+			XYChart.Series<Integer, String> bubbleData=  new XYChart.Series<Integer, String>();
+			
+			bubbleData.setName("Cantidad de productos por categoria");
+			bubbleData.getData().add(new XYChart.Data<Integer, String>(300, "Consola", 2));
+			bubbleData.getData().add(new XYChart.Data<Integer, String>(300, "Videojuego", 2));
+			bubbleData.getData().add(new XYChart.Data<Integer, String>(300, "Consola", 2));
+			bubbleData.getData().add(new XYChart.Data<Integer, String>(300, "Consola", 2));
+			bubbleData.getData().add(new XYChart.Data<Integer, String>(300, "Consola", 2));
+
 			
 
 			return bubbleData;
