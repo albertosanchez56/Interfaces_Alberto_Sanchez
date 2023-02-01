@@ -221,6 +221,7 @@ public class DatosController {
             dialogStage.setScene(scene);   
             GraficoController controller = loader.getController();
 	        controller.setMainApp(this.mainApp);
+	        
             
            			        
             // Muestra el diálogo y no continúa el código hasta que lo cierra el usuario

@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="650.0" prefWidth="750.0" style="-fx-background-color: #606060;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MenuController">
+<BorderPane prefHeight="650.0" prefWidth="750.0" style="-fx-background-color: #606060;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MenuController">
    <top>
       <MenuBar fx:id="menu" prefHeight="20.0" prefWidth="750.0" style="-fx-background-color: #404040;" visible="false" BorderPane.alignment="CENTER">
         <menus>
@@ -31,6 +31,12 @@
                   <MenuItem mnemonicParsing="false" onAction="#cerrarFormularioEditar" style="-fx-text-fill: #404040;" text="Cerrar" />
             </items>
           </Menu>
+            <Menu mnemonicParsing="false" text="Graficos">
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#abrirGrafico" text="Abrir" />
+                <MenuItem mnemonicParsing="false" onAction="#cerrarGrafico" text="Cerrar" />
+              </items>
+            </Menu>
           <Menu mnemonicParsing="false" text="Ayuda">
             <items>
               <MenuItem mnemonicParsing="false" onAction="#abrirAyuda" style="-fx-text-fill: #404040;" text="funcionamiento" />

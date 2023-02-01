@@ -5,6 +5,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import EditarDatos.EditarDatosController;
+import graficos.GraficoController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -72,6 +73,27 @@ public class MenuController {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+    }
+    @FXML
+    void abrirGrafico(ActionEvent event) {
+    	try {
+			// Cargamos el archivo Controles Dinámicos
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(MenuController.class.getResource("/graficos/graficos.fxml"));
+			TabPane listadoControles = (TabPane) loader.load();
+			GraficoController graficos=loader.getController();
+			graficos.setPieData(main.loadPieData());
+			graficos.initPieChart();
+
+			// Se sitúa en el centro del diseño principal
+			rootLayout.setCenter(listadoControles);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+    }
+    @FXML
+    void cerrarGrafico(ActionEvent event) {
+    	rootLayout.setCenter(null);	
     }
 
     @FXML
