@@ -11,10 +11,12 @@ import application.Main;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.chart.BubbleChart;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.PieChart;
 import javafx.scene.chart.PieChart.Data;
 import mostrarDatos.DatosController;
+import javafx.scene.chart.XYChart;
 
 public class GraficoController {
 
@@ -26,10 +28,13 @@ public class GraficoController {
 
     @FXML
     private PieChart pieChart;
+    @FXML
+    private BubbleChart<Integer, Integer> bubbleChart;
     
     @FXML
     private LineChart<String, Number> LineChart;
     private ObservableList<PieChart.Data> pieData;
+    private ObservableList<XYChart.Series<Integer, Integer>> dist2;
     private Main mainApp;
     
     private Productos pro1= new Productos();
@@ -54,6 +59,10 @@ public class GraficoController {
     	    	}
     		
     			
+    	 public void initBubbleChart() {
+    	    	bubbleChart.setData(this.dist2);
+    	    }
+    	    
     		
     		
     	public PieChart getPieChart() {
@@ -78,5 +87,13 @@ public class GraficoController {
 
 	public void setPieData(ObservableList<PieChart.Data> pieData) {
 		this.pieData = pieData;
+	}
+	
+	public ObservableList<XYChart.Series<Integer, Integer>> getDist2() {
+		return dist2;
+	}
+
+	public void setDist2(ObservableList<XYChart.Series<Integer, Integer>> dist2) {
+		this.dist2 = dist2;
 	}
 }

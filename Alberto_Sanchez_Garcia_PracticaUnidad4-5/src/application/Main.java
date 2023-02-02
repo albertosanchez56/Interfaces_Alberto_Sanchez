@@ -163,20 +163,19 @@ public class Main extends Application {
 				
 			return pieChartData;
 		}
-		public XYChart.Series<Integer, String> loadBubbleData(){
+		public ObservableList<XYChart.Series<Integer, Integer>> loadBubbleData(){
+			List<XYChart.Series<Integer, Integer>> list = new ArrayList<XYChart.Series<Integer, Integer>>();
+			XYChart.Series<Integer, Integer> bubbleData=  new XYChart.Series<Integer, Integer>();
 			
-			XYChart.Series<Integer, String> bubbleData=  new XYChart.Series<Integer, String>();
+			bubbleData.setName("Consola");
+			bubbleData.getData().add(new XYChart.Data<Integer, Integer>(2020, 300, 2));
+			bubbleData.getData().add(new XYChart.Data<Integer, Integer>(2021, 1000, 2));
+			bubbleData.getData().add(new XYChart.Data<Integer, Integer>(2022, 400, 2));
 			
-			bubbleData.setName("Cantidad de productos por categoria");
-			bubbleData.getData().add(new XYChart.Data<Integer, String>(300, "Consola", 2));
-			bubbleData.getData().add(new XYChart.Data<Integer, String>(300, "Videojuego", 2));
-			bubbleData.getData().add(new XYChart.Data<Integer, String>(300, "Consola", 2));
-			bubbleData.getData().add(new XYChart.Data<Integer, String>(300, "Consola", 2));
-			bubbleData.getData().add(new XYChart.Data<Integer, String>(300, "Consola", 2));
+			list.add(bubbleData);
+			
 
-			
-
-			return bubbleData;
+			return FXCollections.observableArrayList(list);
 		}
 		
 		public static void main(String[] args) {
