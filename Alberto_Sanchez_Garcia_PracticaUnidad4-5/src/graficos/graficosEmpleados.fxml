@@ -18,7 +18,7 @@
                       <CategoryAxis label="departamento" side="BOTTOM" tickLabelFill="WHITE" />
                     </xAxis>
                     <yAxis>
-                      <NumberAxis autoRanging="false" label="Empleados" side="LEFT" tickLabelFill="WHITE" tickUnit="100.0" upperBound="2000.0" />
+                      <NumberAxis autoRanging="false" label="Empleados" side="LEFT" tickLabelFill="WHITE" tickUnit="200.0" upperBound="5000.0" />
                     </yAxis>
                   </StackedBarChart>
                </children></AnchorPane>

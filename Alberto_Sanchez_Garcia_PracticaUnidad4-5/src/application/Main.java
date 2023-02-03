@@ -81,7 +81,7 @@ public class Main extends Application {
 				
 				
 				//primaryStage.setMaximized(true);
-				primaryStage.setTitle("Practica tema3");
+				primaryStage.setTitle("Practica temas 4-5");
 				primaryStage.show();
 			} catch (Exception e) {
 				e.printStackTrace();
