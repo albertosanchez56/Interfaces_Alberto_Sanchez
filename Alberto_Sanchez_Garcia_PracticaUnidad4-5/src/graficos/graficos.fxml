@@ -18,16 +18,16 @@
             </AnchorPane>
          </content>
       </Tab>
-      <Tab text="Untitled Tab 2">
+      <Tab text="Productos vendidos por año">
          <content>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <BubbleChart fx:id="bubbleChart" layoutX="-6.0" prefHeight="619.0" prefWidth="757.0">
+                  <BubbleChart fx:id="bubbleChart" layoutX="-6.0" prefHeight="619.0" prefWidth="757.0" title="Productos vendidos por año">
                     <xAxis>
-                      <NumberAxis forceZeroInRange="false" lowerBound="2000.0" minorTickCount="10" side="BOTTOM" tickLabelFill="WHITE" upperBound="2025.0" />
+                      <NumberAxis autoRanging="false" label="Año" lowerBound="2018.0" minorTickCount="1" side="BOTTOM" tickLabelFill="WHITE" tickUnit="1.0" upperBound="2025.0" />
                     </xAxis>
                     <yAxis>
-                      <NumberAxis side="LEFT" tickLabelFill="WHITE" upperBound="1000.0" />
+                      <NumberAxis label="Productos" side="LEFT" tickLabelFill="WHITE" upperBound="1000.0" />
                     </yAxis>
                   </BubbleChart>
                </children></AnchorPane>

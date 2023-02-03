@@ -165,14 +165,29 @@ public class Main extends Application {
 		}
 		public ObservableList<XYChart.Series<Integer, Integer>> loadBubbleData(){
 			List<XYChart.Series<Integer, Integer>> list = new ArrayList<XYChart.Series<Integer, Integer>>();
-			XYChart.Series<Integer, Integer> bubbleData=  new XYChart.Series<Integer, Integer>();
+			XYChart.Series<Integer, Integer> bubbleData1=  new XYChart.Series<Integer, Integer>();
 			
-			bubbleData.setName("Consola");
-			bubbleData.getData().add(new XYChart.Data<Integer, Integer>(2020, 300, 2));
-			bubbleData.getData().add(new XYChart.Data<Integer, Integer>(2021, 1000, 2));
-			bubbleData.getData().add(new XYChart.Data<Integer, Integer>(2022, 400, 2));
+			bubbleData1.setName("Consola");
+			bubbleData1.getData().add(new XYChart.Data<Integer, Integer>(2020, 300, 2));
+			bubbleData1.getData().add(new XYChart.Data<Integer, Integer>(2021, 1000, 2));
+			bubbleData1.getData().add(new XYChart.Data<Integer, Integer>(2022, 400, 2));
 			
-			list.add(bubbleData);
+			XYChart.Series<Integer, Integer> bubbleData2=  new XYChart.Series<Integer, Integer>();
+			bubbleData2.setName("Videojuegos");
+			bubbleData2.getData().add(new XYChart.Data<Integer, Integer>(2019, 200, 2));
+			bubbleData2.getData().add(new XYChart.Data<Integer, Integer>(2020, 900, 2));
+			bubbleData2.getData().add(new XYChart.Data<Integer, Integer>(2021, 500, 2));
+			
+			XYChart.Series<Integer, Integer> bubbleData3=  new XYChart.Series<Integer, Integer>();
+			bubbleData3.setName("Perifericos");
+			bubbleData3.getData().add(new XYChart.Data<Integer, Integer>(2021, 50, 2));
+			bubbleData3.getData().add(new XYChart.Data<Integer, Integer>(2020, 200, 2));
+			bubbleData3.getData().add(new XYChart.Data<Integer, Integer>(2022, 300, 2));
+			
+			
+			list.add(bubbleData1);
+			list.add(bubbleData2);
+			list.add(bubbleData3);
 			
 
 			return FXCollections.observableArrayList(list);
