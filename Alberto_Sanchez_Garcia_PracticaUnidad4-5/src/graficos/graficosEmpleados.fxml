@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="750.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="graficos.GraficoController">
+  <tabs>
+    <Tab text="Untitled Tab 1">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <StackedBarChart fx:id="stackedBar" categoryGap="100.0" layoutX="-1.0" prefHeight="622.0" prefWidth="750.0">
+                    <xAxis>
+                      <CategoryAxis label="departamento" side="BOTTOM" tickLabelFill="WHITE" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis autoRanging="false" label="Empleados" side="LEFT" tickLabelFill="WHITE" tickUnit="100.0" upperBound="2000.0" />
+                    </yAxis>
+                  </StackedBarChart>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Untitled Tab 2">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>

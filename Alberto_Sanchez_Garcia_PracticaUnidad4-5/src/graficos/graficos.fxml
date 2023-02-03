@@ -27,7 +27,7 @@
                       <NumberAxis autoRanging="false" label="Año" lowerBound="2018.0" minorTickCount="1" side="BOTTOM" tickLabelFill="WHITE" tickUnit="1.0" upperBound="2025.0" />
                     </xAxis>
                     <yAxis>
-                      <NumberAxis label="Productos" side="LEFT" tickLabelFill="WHITE" upperBound="1000.0" />
+                      <NumberAxis autoRanging="false" label="Productos" minorTickCount="10" side="LEFT" tickLabelFill="WHITE" tickUnit="100.0" upperBound="1000.0" />
                     </yAxis>
                   </BubbleChart>
                </children></AnchorPane>

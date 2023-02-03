@@ -216,7 +216,7 @@ public class DatosController {
 
             // Se crea un nuevo Stage para mostrar el diálogo
             Stage dialogStage = new Stage();
-            dialogStage.setTitle("Precios");
+            dialogStage.setTitle("Graficos");
             dialogStage.initModality(Modality.APPLICATION_MODAL);
             dialogStage.setResizable(false);
                     
@@ -239,6 +239,39 @@ public class DatosController {
 	        
 	    }
     }
+    @FXML
+    void graficoEmpleadoIni(ActionEvent event) {
+    	try {
+    		// Cargamos el diseño del diálogo desde un XML
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(DatosController.class.getResource("/graficos/graficosEmpleados.fxml"));
+            TabPane dialogo = (TabPane) loader.load();
+            dialogo.getStylesheets().add(getClass().getResource("/application/application.css").toExternalForm());
+
+            // Se crea un nuevo Stage para mostrar el diálogo
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Precios");
+            dialogStage.initModality(Modality.APPLICATION_MODAL);
+            dialogStage.setResizable(false);
+                    
+            Scene scene = new Scene(dialogo);
+            dialogStage.setScene(scene);   
+            GraficoController controller = loader.getController();
+            controller.setDist1(mainApp.loadStackBarchart());
+           controller.initStackBarchart();
+          
+	        
+            
+           			        
+            // Muestra el diálogo y no continúa el código hasta que lo cierra el usuario
+            dialogStage.showAndWait(); 
+            
+    	} catch (IOException e) {
+	        e.printStackTrace();
+	        
+	    }
+    }
+    
     
     
     public void setMainApp(Main mainApp) {

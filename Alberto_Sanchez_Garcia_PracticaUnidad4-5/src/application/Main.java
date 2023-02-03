@@ -168,21 +168,21 @@ public class Main extends Application {
 			XYChart.Series<Integer, Integer> bubbleData1=  new XYChart.Series<Integer, Integer>();
 			
 			bubbleData1.setName("Consola");
-			bubbleData1.getData().add(new XYChart.Data<Integer, Integer>(2020, 300, 2));
-			bubbleData1.getData().add(new XYChart.Data<Integer, Integer>(2021, 1000, 2));
-			bubbleData1.getData().add(new XYChart.Data<Integer, Integer>(2022, 400, 2));
+			bubbleData1.getData().add(new XYChart.Data<Integer, Integer>(2020, 300));
+			bubbleData1.getData().add(new XYChart.Data<Integer, Integer>(2021, 100));
+			bubbleData1.getData().add(new XYChart.Data<Integer, Integer>(2022, 400));
 			
 			XYChart.Series<Integer, Integer> bubbleData2=  new XYChart.Series<Integer, Integer>();
 			bubbleData2.setName("Videojuegos");
-			bubbleData2.getData().add(new XYChart.Data<Integer, Integer>(2019, 200, 2));
-			bubbleData2.getData().add(new XYChart.Data<Integer, Integer>(2020, 900, 2));
-			bubbleData2.getData().add(new XYChart.Data<Integer, Integer>(2021, 500, 2));
+			bubbleData2.getData().add(new XYChart.Data<Integer, Integer>(2019, 200));
+			bubbleData2.getData().add(new XYChart.Data<Integer, Integer>(2020, 900));
+			bubbleData2.getData().add(new XYChart.Data<Integer, Integer>(2021, 500));
 			
 			XYChart.Series<Integer, Integer> bubbleData3=  new XYChart.Series<Integer, Integer>();
 			bubbleData3.setName("Perifericos");
-			bubbleData3.getData().add(new XYChart.Data<Integer, Integer>(2021, 50, 2));
-			bubbleData3.getData().add(new XYChart.Data<Integer, Integer>(2020, 200, 2));
-			bubbleData3.getData().add(new XYChart.Data<Integer, Integer>(2022, 300, 2));
+			bubbleData3.getData().add(new XYChart.Data<Integer, Integer>(2021, 500));
+			bubbleData3.getData().add(new XYChart.Data<Integer, Integer>(2020, 200));
+			bubbleData3.getData().add(new XYChart.Data<Integer, Integer>(2022, 300));
 			
 			
 			list.add(bubbleData1);
@@ -191,6 +191,47 @@ public class Main extends Application {
 			
 
 			return FXCollections.observableArrayList(list);
+		}
+		public ObservableList<XYChart.Series<String, Integer>> loadStackBarchart(){
+			List<XYChart.Series<String, Integer>> list = new ArrayList<XYChart.Series<String,Integer>>();
+		
+			// Se crean dos series con datos
+			XYChart.Series<String, Integer> series1 = new XYChart.Series<String, Integer>();
+			series1.setName("2020");
+			series1.getData().add(new XYChart.Data<String, Integer>("Encargado", 200));
+			series1.getData().add(new XYChart.Data<String, Integer>("Marketing", 1000));
+			series1.getData().add(new XYChart.Data<String, Integer>("Manager", 400));
+			series1.getData().add(new XYChart.Data<String, Integer>("Contable", 1500));
+	
+	        
+			// Se crean dos series con datos
+			XYChart.Series<String, Integer> series2 = new XYChart.Series<String, Integer>();
+			series2.setName("2021");
+			series2.getData().add(new XYChart.Data<String, Integer>("Encargado", 500));
+			series2.getData().add(new XYChart.Data<String, Integer>("Marketing", 1300));
+			series2.getData().add(new XYChart.Data<String, Integer>("Manager", 600));
+			series2.getData().add(new XYChart.Data<String, Integer>("Contable", 500));
+			
+			XYChart.Series<String, Integer> series3 = new XYChart.Series<String, Integer>();
+			series3.setName("2022");
+			series3.getData().add(new XYChart.Data<String, Integer>("Encargado", 1340));
+			series3.getData().add(new XYChart.Data<String, Integer>("Marketing", 507));
+			series3.getData().add(new XYChart.Data<String, Integer>("Manager", 400));
+			series3.getData().add(new XYChart.Data<String, Integer>("Contable", 700));
+			
+			XYChart.Series<String, Integer> series4 = new XYChart.Series<String, Integer>();
+			series4.setName("2023");
+			series4.getData().add(new XYChart.Data<String, Integer>("Encargado", 800));
+			series4.getData().add(new XYChart.Data<String, Integer>("Marketing", 1500));
+			series4.getData().add(new XYChart.Data<String, Integer>("Manager", 460));
+			series4.getData().add(new XYChart.Data<String, Integer>("Contable", 1333));
+			
+			list.add(series1);
+			list.add(series2);
+			list.add(series3);
+			list.add(series4);
+			
+	        return FXCollections.observableArrayList(list);
 		}
 		
 		public static void main(String[] args) {
