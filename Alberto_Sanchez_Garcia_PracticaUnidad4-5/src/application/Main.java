@@ -163,6 +163,49 @@ public class Main extends Application {
 				
 			return pieChartData;
 		}
+		
+
+		public ObservableList<XYChart.Series<String, Number>> loadDist1(){
+			List<XYChart.Series<String, Number>> list = new ArrayList<XYChart.Series<String,Number>>();
+		
+			// Se crean dos series con datos
+			XYChart.Series<String, Number> series1 = new XYChart.Series<String, Number>();
+			series1.setName("Consolas");
+			series1.getData().add(new XYChart.Data<String, Number>("2018", 300));
+			series1.getData().add(new XYChart.Data<String, Number>("2019", 1000));
+			series1.getData().add(new XYChart.Data<String, Number>("2020", 400));
+			series1.getData().add(new XYChart.Data<String, Number>("2021", 600));
+			series1.getData().add(new XYChart.Data<String, Number>("2022", 1300));
+			series1.getData().add(new XYChart.Data<String, Number>("2023", 900));
+			
+	        
+			// Se crean dos series con datos
+			XYChart.Series<String, Number> series2 = new XYChart.Series<String, Number>();
+			series2.setName("Videojuegos");
+			series2.getData().add(new XYChart.Data<String, Number>("2018", 1300));
+			series2.getData().add(new XYChart.Data<String, Number>("2019", 1900));
+			series2.getData().add(new XYChart.Data<String, Number>("2020", 1500));
+			series2.getData().add(new XYChart.Data<String, Number>("2021", 1100));
+			series2.getData().add(new XYChart.Data<String, Number>("2022", 1903));
+			series2.getData().add(new XYChart.Data<String, Number>("2023", 1111));
+			
+			
+			XYChart.Series<String, Number> series3 = new XYChart.Series<String, Number>();
+			series3.setName("Perifericos");
+			series3.getData().add(new XYChart.Data<String, Number>("2018", 700));
+			series3.getData().add(new XYChart.Data<String, Number>("2019", 400));
+			series3.getData().add(new XYChart.Data<String, Number>("2020", 300));
+			series3.getData().add(new XYChart.Data<String, Number>("2021", 1000));
+			series3.getData().add(new XYChart.Data<String, Number>("2022", 600));
+			series3.getData().add(new XYChart.Data<String, Number>("2023", 700));
+			
+			
+			list.add(series1);
+			list.add(series2);
+			list.add(series3);
+			
+	        return FXCollections.observableArrayList(list);
+		}
 		public ObservableList<XYChart.Series<Integer, Integer>> loadBubbleData(){
 			List<XYChart.Series<Integer, Integer>> list = new ArrayList<XYChart.Series<Integer, Integer>>();
 			XYChart.Series<Integer, Integer> bubbleData1=  new XYChart.Series<Integer, Integer>();

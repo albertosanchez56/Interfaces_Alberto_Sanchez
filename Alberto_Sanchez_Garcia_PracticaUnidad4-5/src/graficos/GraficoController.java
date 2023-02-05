@@ -15,9 +15,11 @@ import javafx.scene.chart.BubbleChart;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.PieChart;
 import javafx.scene.chart.PieChart.Data;
+import javafx.scene.chart.ScatterChart;
 import javafx.scene.chart.StackedBarChart;
 import mostrarDatos.DatosController;
 import javafx.scene.chart.XYChart;
+import javafx.scene.chart.XYChart.Series;
 
 public class GraficoController {
 
@@ -30,7 +32,7 @@ public class GraficoController {
     @FXML
     private PieChart pieChart;
     @FXML
-    private BubbleChart<Integer, Integer> bubbleChart;
+    private ScatterChart<String, Number> scatterChart;
     
     @FXML
     private StackedBarChart<String, Integer> stackedBar;
@@ -40,6 +42,7 @@ public class GraficoController {
     private ObservableList<PieChart.Data> pieData;
     private ObservableList<XYChart.Series<Integer, Integer>> dist2;
     private ObservableList<XYChart.Series<String, Integer>> dist1;
+    private ObservableList<XYChart.Series<String, Number>> scatter;
     private Main mainApp;
     
     private Productos pro1= new Productos();
@@ -64,8 +67,8 @@ public class GraficoController {
     	    	}
     		
     			
-    	 public void initBubbleChart() {
-    	    	bubbleChart.setData(this.dist2);
+    	 public void initScatterChart() {
+    		 scatterChart.setData(this.scatter);
     	    }
     	    
     	public void initStackBarchart() {
@@ -111,5 +114,13 @@ public class GraficoController {
 
 	public void setDist1(ObservableList<XYChart.Series<String, Integer>> dist1) {
 		this.dist1 = dist1;
+	}
+	
+	public ObservableList<XYChart.Series<String, Number>> getScatter() {
+		return scatter;
+	}
+
+	public void setScatter(ObservableList<Series<String, Number>> observableList) {
+		this.scatter = observableList;
 	}
 }

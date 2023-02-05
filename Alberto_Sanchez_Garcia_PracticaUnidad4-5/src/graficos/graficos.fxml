@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.chart.BubbleChart?>
+<?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.chart.ScatterChart?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="750.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graficos.GraficoController">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="750.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graficos.GraficoController">
    <tabs>
       <Tab text="Precio de los productos">
          <content>
@@ -22,14 +23,14 @@
          <content>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <BubbleChart fx:id="bubbleChart" layoutX="-6.0" prefHeight="619.0" prefWidth="757.0" title="Productos vendidos por año">
+                  <ScatterChart fx:id="scatterChart" prefHeight="621.0" prefWidth="750.0">
                     <xAxis>
-                      <NumberAxis autoRanging="false" label="Año" lowerBound="2018.0" minorTickCount="1" side="BOTTOM" tickLabelFill="WHITE" tickUnit="1.0" upperBound="2025.0" />
+                      <CategoryAxis label="asdasdasd" side="BOTTOM" tickLabelFill="WHITE" />
                     </xAxis>
                     <yAxis>
-                      <NumberAxis autoRanging="false" label="Productos" minorTickCount="10" side="LEFT" tickLabelFill="WHITE" tickUnit="100.0" upperBound="1000.0" />
+                      <NumberAxis autoRanging="false" side="LEFT" tickLabelFill="WHITE" tickUnit="100.0" upperBound="2000.0" />
                     </yAxis>
-                  </BubbleChart>
+                  </ScatterChart>
                </children></AnchorPane>
          </content>
       </Tab>

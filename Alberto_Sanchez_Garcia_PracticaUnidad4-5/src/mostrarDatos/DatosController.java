@@ -225,8 +225,8 @@ public class DatosController {
             GraficoController controller = loader.getController();
             controller.setPieData(mainApp.loadPieData());
             controller.initPieChart();
-            controller.setDist2(mainApp.loadBubbleData());
-	        controller.initBubbleChart();
+            controller.setScatter(mainApp.loadDist1());
+	        controller.initScatterChart();
           
 	        
             
