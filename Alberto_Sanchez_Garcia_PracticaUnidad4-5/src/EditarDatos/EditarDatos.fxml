@@ -144,12 +144,12 @@
                                           </TextField>
                                           <Button mnemonicParsing="false" onAction="#handleDeletePerson" text="Eliminar" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="9">
                                              <GridPane.margin>
-                                                <Insets bottom="30.0" left="150.0" />
+                                                <Insets bottom="30.0" left="120.0" />
                                              </GridPane.margin>
                                           </Button>
                                           <Button mnemonicParsing="false" onAction="#handleEditPerson" text="Editar" GridPane.columnIndex="1" GridPane.rowIndex="9">
                                              <GridPane.margin>
-                                                <Insets bottom="30.0" left="90.0" />
+                                                <Insets bottom="30.0" left="72.0" />
                                              </GridPane.margin>
                                           </Button>
                                           <Label layoutX="20.0" layoutY="132.0" prefHeight="17.0" prefWidth="70.0" text="Genero" GridPane.rowIndex="6">

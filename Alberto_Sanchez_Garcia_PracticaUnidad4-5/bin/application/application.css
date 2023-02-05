@@ -23,3 +23,33 @@
 	-fx-background-color: #606060;
 	-fx-text-fill: #FFFFFF;
 }
+
+TableView .table-row-cell:even:selected{
+	-fx-background-color: #5EF6D3;
+	-fx-opacity: 0.5;
+	-fx-text-fill: white;
+	
+}
+TableView .table-row-cell:odd:selected { /* Filas impares del ListView */
+	-fx-background-color: #301891;
+	-fx-opacity: 0.5;
+	-fx-text-fill: white;
+}
+TableView .column-header .label{
+    -fx-text-fill: black;
+    
+}
+.grid-central .location{
+	-fx-alignment: center;
+}
+Button{
+	-fx-padding: 5;
+}
+
+GridPane {
+	-fx-border-color: grey;
+    -fx-border-width: 2px;
+    -fx-padding: 10;
+    -fx-spacing: 8;
+    -fx-border-insets: 12 12 4 12;
+}
