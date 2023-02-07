@@ -20,7 +20,11 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import mostrarDatos.DatosController;
-
+/**
+ * Clase Controller para el menu principal
+ * 
+ * @author Alberto Sanchez Garcia
+ * */
 public class MenuController {
 	private BorderPane rootLayout;
 	private Main main;
@@ -40,6 +44,7 @@ public class MenuController {
     void initialize() {
 
     }
+    /** Abre el formulario de los empleados y los productos*/
     @FXML
     private void abrirFormulario(ActionEvent event) {    	
     	try {
@@ -58,6 +63,7 @@ public class MenuController {
 		}
     }
     
+    /**Abre el formulario para editar los empleados y los productos*/
     @FXML
     void abrirFormularioEditar(ActionEvent event) {
     	try {
@@ -74,28 +80,8 @@ public class MenuController {
 			e.printStackTrace();
 		}
     }
-   /* @FXML
-    void abrirGrafico(ActionEvent event) {
-    	try {
-			// Cargamos el archivo Controles Dinámicos
-			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(MenuController.class.getResource("/graficos/graficos.fxml"));
-			TabPane listadoControles = (TabPane) loader.load();
-			GraficoController graficos=loader.getController();
-			graficos.setPieData(main.loadPieData());
-			graficos.initPieChart();
 
-			// Se sitúa en el centro del diseño principal
-			rootLayout.setCenter(listadoControles);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-    }
-    @FXML
-    void cerrarGrafico(ActionEvent event) {
-    	rootLayout.setCenter(null);	
-    }*/
-
+    /**Abre la ayuda de la aplicacion*/
     @FXML
     void abrirAyuda(ActionEvent event) {
     	try {
@@ -112,7 +98,7 @@ public class MenuController {
 		}
     }
     
-
+    /**Abre el inicio de sesion*/
     @FXML
     void iniciarSesion(ActionEvent event) {
     	if(isInputValid()) {

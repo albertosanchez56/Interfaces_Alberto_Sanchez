@@ -20,7 +20,13 @@ import javafx.scene.control.MenuBar;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 
-
+/**
+ * Clase Main donde se inicia la aplicación
+ * 
+ * @author Alberto Sanchez Garcia
+ * @version 4.0
+ * 
+ * */
 public class Main extends Application {
 	
 		private Stage primaryStage;
@@ -29,7 +35,7 @@ public class Main extends Application {
 		private ObservableList<Productos> proData = FXCollections.observableArrayList();
 		private List<Productos> listapro = new ArrayList<>();
 		
-	
+		/**Crea la informacion de los empleados y los productos */
  	   public Main() {
  			personData.add(new Persona("Alberto", "Sanchez" ,620141444, "C/asdasdasdasdas", "Alberto.smith@example.com","Encargado","masculino"));
  			personData.add(new Persona("Lucia", "Garcia" ,51566115, "C/asdasdasdasdas", "Lucia.smith@example.com","Manager","femenino"));
@@ -43,22 +49,8 @@ public class Main extends Application {
  			proData.add(new Productos("Skyrim", "Videojuego" ,40.0, "España", "00061"));
  			proData.add(new Productos("Xbox 360", "Consola" ,300.0, "España", "00099"));
  			
- 		  
- 			
- 			// TODO Probamos el map con solo dos ítems, ya que como se puede observar requiere más líneas de código que la altenrativa anterior
- 			/*Map<String, Object> item1 = new HashMap<>();
- 			item1.put("firstName", "Hans");
- 			item1.put("lastName" , "Muster");
-
- 			mapData.add(item1);
-
- 			Map<String, Object> item2 = new HashMap<>();
- 			item2.put("firstName", "Ruth");
- 			item2.put("lastName" , "Mueller");
-
- 			mapData.add(item2);*/
  		}
- 		
+ 	  /**Inicia la aplicacion */
 		@Override
 		public void start(Stage primaryStage ) {
 			try {
@@ -87,6 +79,8 @@ public class Main extends Application {
 				e.printStackTrace();
 			}
 		}
+		
+		/**Abre un nuevo dialogo para editar los empleados*/
 		public boolean showPersonEditDialog(Persona person) {
 		    try {
 		        // Cargamos el diseño del diálogo desde un XML
@@ -116,7 +110,7 @@ public class Main extends Application {
 		        return false;
 		    }
 		}
-		
+		/**Abre un nuevo dialogo para editar los productos*/
 		public boolean showProductEditDialog(Productos product) {
 		    try {
 		        // Cargamos el diseño del diálogo desde un XML
@@ -146,6 +140,8 @@ public class Main extends Application {
 		        return false;
 		    }
 		}
+		
+		/**Añade los datos al PieChart*/
 		public ObservableList<PieChart.Data> loadPieData(){
 			listapro=new ArrayList<>();
 			listapro.addAll(getProductosData());

@@ -6,7 +6,12 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
+/**
+ * Clase controller para el editDialog de los empleados
+ * 
+ * @author Alberto Sanchez Garcia
+ * 
+ * */
 public class PersonEditDialogController {
 	 @FXML
 	    private TextField firstName2;

@@ -6,6 +6,11 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
+/**
+ * 	Clase persona.
+ *
+ *	@author Alberto Sanchez Garcia
+ */
 public class Persona {
 
     private final SimpleStringProperty firstName;
@@ -16,9 +21,23 @@ public class Persona {
     private final SimpleStringProperty puesto;
     private final SimpleStringProperty genero;
     
+    /**
+     * Constructor por defecto.
+     * */
     public Persona() {
     	this(null, null,0,null,null,null,null);
     }
+    /**
+	 * Constructor con nombre , primer apellido, telefono, direccion, email, puesto y genero.
+	 * 
+	 * @param fName Nombre del empleado
+	 * @param lName Primer apellido del empleado
+	 * @param itelefono telefono del empleado.
+	 * @param sdireccion Direccion del empleado.
+	 * @param email Email del empleado.
+	 * @param spuesto Puesto del empleado.
+	 * @param sgenero Genero del empleado.
+	 */
 	public Persona(String fName, String lName, Integer itelefono,String sdireccion, String email,String spuesto,String sgenero) {
         this.firstName = new SimpleStringProperty(fName);
         this.lastName = new SimpleStringProperty(lName);

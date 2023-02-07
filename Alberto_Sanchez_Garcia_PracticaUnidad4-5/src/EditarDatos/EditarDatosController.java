@@ -36,6 +36,12 @@ import javafx.scene.input.DragEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.scene.input.TransferMode;
+
+/**
+ * Clase Controller para editar los datos
+ * 
+ * @author Alberto Sanchez Garcia
+ * */
 public class EditarDatosController {
 
 	public static final ObservableList<String> names = 
@@ -145,41 +151,17 @@ public class EditarDatosController {
     
     @FXML
 	private ImageView imageView;
-   /* private ObservableList<Persona> dataEmpleados = FXCollections.observableArrayList(
-    	    new Persona("Alberto", "Sanchez" ,620141444, "C/asdasdasdasdas", "Alberto.smith@example.com"),
-    	    new Persona("Lucia", "Garcia" ,51566115, "C/asdasdasdasdas", "Lucia.smith@example.com"),
-    	    new Persona("Antonio", "Blas" ,51566115, "C/asdasdasdasdas", "Antonio.smith@example.com"),
-    	    new Persona("Javier", "Escalera" ,51566115, "C/asdasdasdasdas", "Javier.smith@example.com"),
-    	    new Persona("Miguel", "Smith" ,51566115, "C/asdasdasdasdas", "Miguel.smith@example.com")
-    	);
-    
 
-    private ObservableList<Productos> dataPro = FXCollections.observableArrayList(
-    	    new Productos("Play Station 4", "Consola" ,400.0, "China", "00034"),
-    	    new Productos("Elden Ring", "Videojuego" ,60.0, "China", "00032"),
-    	    new Productos("Logitec 933", "Periferico" ,80.0, "Portugal", "00045"),
-    	    new Productos("Skyrim", "Videojuego" ,40.0, "España", "00061"),
-    	    new Productos("Xbox 360", "Consola" ,300.0, "España", "00099")
-    	   
-    	);*/
     private Main mainApp;
+    /**
+     * Metodo initialize para inicializar los datos en las distintas tabla , labels ...
+     * */
     @FXML
     void initialize() {
-    	
-    	/*nombreProduc.setCellValueFactory(new PropertyValueFactory<Productos,String>("firstName"));
-    	tipoCol.setCellValueFactory(new PropertyValueFactory<Productos,String>("tipo"));
-    	precioCol.setCellValueFactory(new PropertyValueFactory<Productos,Double>("precio"));
-    	procedenciaCol.setCellValueFactory(new PropertyValueFactory<Productos,String>("procedencia"));
-    	codigoCol.setCellValueFactory(new PropertyValueFactory<Productos,String>("codigo"));
-    	
-    	firstNameCol.setCellValueFactory(new PropertyValueFactory<Persona,String>("firstName"));
-        lastNameCol.setCellValueFactory(new PropertyValueFactory<Persona,String>("lastName"));
-        telefonoCol.setCellValueFactory(new PropertyValueFactory<Persona,Integer>("telefono"));
-        direccionCol.setCellValueFactory(new PropertyValueFactory<Persona,String>("direccion"));
-        emailCol.setCellValueFactory(new PropertyValueFactory<Persona,String>("email"));*/
+
     	firstNameCol.setCellValueFactory(cellData -> cellData.getValue().firstNameProperty());
     	lastNameCol.setCellValueFactory(cellData -> cellData.getValue().lastNameProperty());
-    	//telefonoCol.setCellValueFactory(cellData -> cellData.getValue().telefonoProperty());
+
     	telefonoCol.setCellValueFactory(new PropertyValueFactory<Persona,Integer>("telefono"));
     	direccionCol.setCellValueFactory(cellData -> cellData.getValue().direccionProperty());
     	emailCol.setCellValueFactory(cellData -> cellData.getValue().emailProperty());
@@ -196,32 +178,20 @@ public class EditarDatosController {
                 (observable, oldValue, newValue) -> showProductosDetails(newValue));
     	
     	
-    	//listaNombresProducto.setItems(dataPro);
-    	//listaNombresEmpleados.setItems(dataEmpleados);
 
-    	//tipoCombo.setItems(FXCollections.observableArrayList("Consola","Periferico","Videojuego"));
-    	//tipoCombo.setValue("Seleciona un tipo");
-    	//showPersonDetails(null);
-    	
     	tipoCombo2.setItems(FXCollections.observableArrayList("Consola","Periferico","Videojuego"));
     	tipoCombo2.setValue("Seleciona un tipo");
-    	
-    	
-    	//procedenciaCombo.setItems(FXCollections.observableArrayList("España","China","Portugal","India","Francia","Inglaterra"));
-    	//procedenciaCombo.setValue("Seleciona un pais");
+
     	
     	procedenciaCombo2.setItems(FXCollections.observableArrayList("España","China","Portugal","India","Francia","Inglaterra"));
     	procedenciaCombo2.setValue("Seleciona un pais");
     	
     	puestoCombo.setItems(FXCollections.observableArrayList("Encargado","Manager","Contable"));
-    	//puestoCombo2.setItems(FXCollections.observableArrayList("Encargado","Manager","Contable"));
+
     	
 		list1.setItems(data);
 		list1.setEditable(true);
 		list1.setCellFactory(ComboBoxListCell.forListView(names));
-		/*list2.setItems(data);
-		list2.setEditable(true);
-		list2.setCellFactory(ComboBoxListCell.forListView(names));*/
 		
 		names.addAll(
 	             "trabajador", "productivo", "actitud positiva", "empatico",
@@ -234,7 +204,7 @@ public class EditarDatosController {
         }
     }
     
-
+    /**Metodo para recoger los datos de la clase main*/
     public void setMainApp(Main mainApp) {
         this.mainApp = mainApp;
 
@@ -259,23 +229,8 @@ public class EditarDatosController {
     
   
  
-    /*@FXML
-    private void handleOk() {
-        if (isInputValid()) {
-            person.setFirstName(firstName2.getText());
-            person.setLastName(lastName2.getText());
-            person.setTelefono(Integer.parseInt(telefono2.getText()));
-            person.setDireccion(direcciones2.getText());
-            person.setEmail(email2.getText());
-            
-            
-
-            okClicked = true;
-            dialogStage.close();
-        }
-    }*/
    
-   
+   /**Metodo para mostrar los datos de el empleado seleccionado*/
     private void showPersonDetails(Persona person) {
         if (person != null) {
         	// Si el campo contiene datos, entonces se rellena la información
@@ -301,8 +256,8 @@ public class EditarDatosController {
             
         }
     }
-  
     
+    /**Metodo para mostrar los datos de el producto seleccionado*/
     private void showProductosDetails(Productos produc) {
     	
     	if(produc!=null) {
@@ -323,6 +278,8 @@ public class EditarDatosController {
     	   codigoField.setText("");
     	}
     }
+    
+    /**metodo para borrar el empleado seleccionado*/
     @FXML
     private void handleDeletePerson(ActionEvent event) {
        	int selectedIndex = listaNombresEmpleados.getSelectionModel().getSelectedIndex();
@@ -354,6 +311,7 @@ public class EditarDatosController {
     	}    	
     }
     
+    /**metodo para borrar el producto seleccionado*/
     @FXML
     private void handleDeleteProduct(ActionEvent event) {
        	int selectedIndex = listaNombresProducto.getSelectionModel().getSelectedIndex();
@@ -395,6 +353,7 @@ public class EditarDatosController {
                
     }
     
+    /**metodo para editar el producto seleccionado*/
     @FXML
     private void handleEditProdcut(ActionEvent event) {
     	Productos selectedProduct = listaNombresProducto.getSelectionModel().getSelectedItem();
@@ -415,6 +374,7 @@ public class EditarDatosController {
     		errorAlert.showAndWait();
         }
     }
+    
     @FXML
     private void handleNewPerson(ActionEvent event) {
     	 Persona tempPerson = new Persona();
@@ -425,6 +385,7 @@ public class EditarDatosController {
         
                
     }
+    /**metodo para editar el empleado seleccionado*/
     @FXML
     private void handleEditPerson(ActionEvent event) {
         Persona selectedPerson = listaNombresEmpleados.getSelectionModel().getSelectedItem();
