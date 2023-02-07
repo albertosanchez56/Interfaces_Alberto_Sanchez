@@ -73,6 +73,8 @@ public class PersonEditDialogController {
 	        return okClicked;
 	    }
 
+	    
+	    /**Metodo para manejar el boton de ok*/
 	    @FXML
 	    private void handleOk() {
 	    	 if (isInputValid()) {
@@ -101,6 +103,7 @@ public class PersonEditDialogController {
 	        dialogStage.close();
 	    }
 	    
+	    /**Metodo para comprobar si los datos introducidos son validos*/
 	    private boolean isInputValid() {
 	    	String errorMessage = "";
 	    	

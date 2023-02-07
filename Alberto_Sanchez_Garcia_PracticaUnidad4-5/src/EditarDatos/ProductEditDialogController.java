@@ -11,6 +11,11 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 
+/**
+ * Clase Controller para el editDialog de los productos
+ * 
+ * @author Alberto Sanchez Garcia
+ * */
 public class ProductEditDialogController {
 
 	 @FXML
@@ -54,6 +59,7 @@ public class ProductEditDialogController {
 	        return okClicked;
 	    }
 
+	    /**Metodo para manejar el boton de ok*/
 	    @FXML
 	    private void handleOk() {
 	    	 if (isInputValid()) {
@@ -72,7 +78,7 @@ public class ProductEditDialogController {
 	    private void handleCancel() {
 	        dialogStage.close();
 	    }
-	    
+	    /**Metodo para comprobar si los datos introducidos son validos*/
 	    private boolean isInputValid() {
 	    	String errorMessage = "";
 	    	

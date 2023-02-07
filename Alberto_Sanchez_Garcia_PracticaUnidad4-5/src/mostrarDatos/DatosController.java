@@ -34,6 +34,13 @@ import javafx.scene.chart.PieChart;
 
 import javafx.event.ActionEvent;
 
+
+/**
+ * 
+ * Clase Controller para mostrar los datos de los productos y de los empleados
+ * 
+ * @author Alberto Sanchez Garcia
+ * */
 public class DatosController {
 
 
@@ -118,42 +125,13 @@ public class DatosController {
     @FXML
     private PieChart pieChart;
     private List<Productos> listapro = new ArrayList<>();
-    
-   
-   /* private ObservableList<Persona> dataEmpleados = FXCollections.observableArrayList(
-    	    new Persona("Alberto", "Sanchez" ,620141444, "C/asdasdasdasdas", "Alberto.smith@example.com"),
-    	    new Persona("Lucia", "Garcia" ,51566115, "C/asdasdasdasdas", "Lucia.smith@example.com"),
-    	    new Persona("Antonio", "Blas" ,51566115, "C/asdasdasdasdas", "Antonio.smith@example.com"),
-    	    new Persona("Javier", "Escalera" ,51566115, "C/asdasdasdasdas", "Javier.smith@example.com"),
-    	    new Persona("Miguel", "Smith" ,51566115, "C/asdasdasdasdas", "Miguel.smith@example.com")
-    	);
-    
-
-    private ObservableList<Productos> dataPro = FXCollections.observableArrayList(
-    	    new Productos("Play Station 4", "Consola" ,400.0, "China", "00034"),
-    	    new Productos("Elden Ring", "Videojuego" ,60.0, "China", "00032"),
-    	    new Productos("Logitec 933", "Periferico" ,80.0, "Portugal", "00045"),
-    	    new Productos("Skyrim", "Videojuego" ,40.0, "España", "00061"),
-    	    new Productos("Xbox 360", "Consola" ,300.0, "España", "00099")
-    	   
-    	);*/
+    /**
+     * Metodo initialize para inicializar los datos en las distintas tabla , labels ...
+     * */
     @FXML
     void initialize(){
     	
-       
-    	
-    	/*nombreProduc.setCellValueFactory(new PropertyValueFactory<Productos,String>("firstName"));
-    	tipoCol.setCellValueFactory(new PropertyValueFactory<Productos,String>("tipo"));
-    	precioCol.setCellValueFactory(new PropertyValueFactory<Productos,Double>("precio"));
-    	procedenciaCol.setCellValueFactory(new PropertyValueFactory<Productos,String>("procedencia"));
-    	codigoCol.setCellValueFactory(new PropertyValueFactory<Productos,String>("codigo"));
-    	
-    	firstNameCol.setCellValueFactory(new PropertyValueFactory<Persona,String>("firstName"));
-        lastNameCol.setCellValueFactory(new PropertyValueFactory<Persona,String>("lastName"));
-        telefonoCol.setCellValueFactory(new PropertyValueFactory<Persona,Integer>("telefono"));
-        direccionCol.setCellValueFactory(new PropertyValueFactory<Persona,String>("direccion"));
-        emailCol.setCellValueFactory(new PropertyValueFactory<Persona,String>("email"));
-        	*/
+
     	firstNameCol.setCellValueFactory(cellData -> cellData.getValue().firstNameProperty());
     	lastNameCol.setCellValueFactory(cellData -> cellData.getValue().lastNameProperty());
     	//telefonoCol.setCellValueFactory(cellData -> cellData.getValue().telefonoProperty());
@@ -205,6 +183,10 @@ public class DatosController {
     	
     }
     
+    /**
+     * 
+     * Metodo para abrir los graficos de los productos
+     * */
     @FXML
     void graficoIni(ActionEvent event) {
     	try {
@@ -239,6 +221,8 @@ public class DatosController {
 	        
 	    }
     }
+    
+    /**Metodo para abrir los graficos de los empleados*/
     @FXML
     void graficoEmpleadoIni(ActionEvent event) {
     	try {
@@ -273,7 +257,7 @@ public class DatosController {
     }
     
     
-    
+    /**Metodo para recoger los datos de la clase main*/
     public void setMainApp(Main mainApp) {
         this.mainApp = mainApp;
 

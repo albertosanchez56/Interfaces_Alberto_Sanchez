@@ -21,6 +21,13 @@ import mostrarDatos.DatosController;
 import javafx.scene.chart.XYChart;
 import javafx.scene.chart.XYChart.Series;
 
+/**
+ * 
+ * Clase Controller para los graficos
+ * 
+ * @author Alberto Sanchez Garcia
+ * 
+ * */
 public class GraficoController {
 
 	@FXML
