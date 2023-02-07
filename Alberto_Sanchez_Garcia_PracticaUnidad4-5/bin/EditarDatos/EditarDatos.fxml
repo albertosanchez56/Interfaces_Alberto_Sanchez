@@ -26,7 +26,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="750.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EditarDatos.EditarDatosController">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="750.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EditarDatos.EditarDatosController">
   <tabs>
     <Tab text="Empleados">
       <content>
@@ -421,19 +421,19 @@
                                           </TextField>
                                           <Button mnemonicParsing="false" onAction="#handleDeleteProduct" text="Eliminar" GridPane.columnIndex="1" GridPane.rowIndex="6">
                                              <GridPane.margin>
-                                                <Insets bottom="30.0" left="150.0" />
+                                                <Insets bottom="30.0" left="120.0" />
                                              </GridPane.margin>
                                           </Button>
                                           <Button mnemonicParsing="false" onAction="#handleEditProdcut" prefHeight="25.0" prefWidth="52.0" text="Editar" GridPane.columnIndex="1" GridPane.rowIndex="6">
                                              <GridPane.margin>
-                                                <Insets bottom="30.0" left="90.0" />
+                                                <Insets bottom="30.0" left="60.0" />
                                              </GridPane.margin>
                                           </Button>
                                           <ComboBox fx:id="tipoCombo" prefHeight="25.0" prefWidth="243.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                           <ChoiceBox fx:id="procedenciaCombo" prefHeight="25.0" prefWidth="245.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                                           <Button mnemonicParsing="false" onAction="#handleNewProduct" text="Añadir" GridPane.columnIndex="1" GridPane.rowIndex="6">
                                              <GridPane.margin>
-                                                <Insets bottom="30.0" left="30.0" />
+                                                <Insets bottom="30.0" />
                                              </GridPane.margin>
                                           </Button>
                                           <Label prefHeight="53.0" prefWidth="184.0" text="Inserta la imagen del producto" GridPane.columnIndex="1">
