@@ -59,3 +59,15 @@ GridPane {
     -fx-spacing: 8;
     -fx-border-insets: 12 12 4 12;
 }
+
+#AnchorIzquieda{
+	-fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #383939, #B8C9CB);
+}
+
+.tree-cell:expanded{
+	-fx-font-weight: bold;
+}
+
+.button{
+	-fx-background-color: #0DD1D1;
+}

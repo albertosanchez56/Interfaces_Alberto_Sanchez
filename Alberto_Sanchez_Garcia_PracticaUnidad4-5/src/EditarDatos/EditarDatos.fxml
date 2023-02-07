@@ -37,7 +37,7 @@
                      <children>
                         <HBox prefHeight="567.0" prefWidth="750.0" style="-fx-background-color: #404040;">
                            <children>
-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="621.0" prefWidth="314.0">
+                              <AnchorPane id="AnchorIzquieda" minHeight="0.0" minWidth="0.0" prefHeight="621.0" prefWidth="314.0">
                                  <children>
                                     <TextField layoutX="3.0" layoutY="77.0" prefHeight="25.0" prefWidth="196.0" />
                                     <Button layoutX="200.0" layoutY="77.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="69.0" text="Buscar" />
@@ -327,7 +327,7 @@
                      <children>
                         <HBox layoutX="-3.0" layoutY="-3.0" prefHeight="558.0" prefWidth="756.0" style="-fx-background-color: #404040;">
                            <children>
-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="621.0" prefWidth="314.0">
+                              <AnchorPane id="AnchorIzquieda" minHeight="0.0" minWidth="0.0" prefHeight="621.0" prefWidth="314.0">
                                  <children>
                                     <TextField layoutX="3.0" layoutY="77.0" prefHeight="25.0" prefWidth="198.0" />
                                     <Button layoutX="202.0" layoutY="77.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" text="Buscar" />
