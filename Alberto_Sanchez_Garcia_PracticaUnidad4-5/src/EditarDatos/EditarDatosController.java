@@ -204,7 +204,9 @@ public class EditarDatosController {
         }
     }
     
-    /**Metodo para recoger los datos de la clase main*/
+    /**
+     * @param mainApp para recoger la clase principal
+     * Metodo para recoger los datos de la clase main*/
     public void setMainApp(Main mainApp) {
         this.mainApp = mainApp;
 

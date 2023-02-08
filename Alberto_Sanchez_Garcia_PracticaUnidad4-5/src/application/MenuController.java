@@ -44,7 +44,9 @@ public class MenuController {
     void initialize() {
 
     }
-    /** Abre el formulario de los empleados y los productos*/
+    /** 
+     * 
+     * Abre el formulario de los empleados y los productos*/
     @FXML
     private void abrirFormulario(ActionEvent event) {    	
     	try {
@@ -109,6 +111,8 @@ public class MenuController {
     	
     	
     }
+    
+    /**Metodo para comprobar si los datos son correctos en el inicio de sesion*/
     private boolean isInputValid() {
     	String errorMessage = "";
     	if(correo2.getText()== null || correo2.getText().length() == 0) {

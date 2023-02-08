@@ -50,7 +50,10 @@ public class Main extends Application {
  			proData.add(new Productos("Xbox 360", "Consola" ,300.0, "España", "00099"));
  			
  		}
- 	  /**Inicia la aplicacion */
+ 	  /**
+ 	   * 
+ 	   * @param primaryStage Objeto con la ventana principal
+ 	   * Inicia la aplicacion */
 		@Override
 		public void start(Stage primaryStage ) {
 			try {
@@ -80,7 +83,9 @@ public class Main extends Application {
 			}
 		}
 		
-		/**Abre un nuevo dialogo para editar los empleados*/
+		/**@param person Objeto para mostrar los datos de la persona seleccionada
+		 * 
+		 * Abre un nuevo dialogo para editar los empleados*/
 		public boolean showPersonEditDialog(Persona person) {
 		    try {
 		        // Cargamos el diseño del diálogo desde un XML
@@ -110,7 +115,9 @@ public class Main extends Application {
 		        return false;
 		    }
 		}
-		/**Abre un nuevo dialogo para editar los productos*/
+		/**
+		 * @param product Objeto para mostrar los datos del producto seleccionada
+		 * Abre un nuevo dialogo para editar los productos*/
 		public boolean showProductEditDialog(Productos product) {
 		    try {
 		        // Cargamos el diseño del diálogo desde un XML
@@ -160,7 +167,7 @@ public class Main extends Application {
 			return pieChartData;
 		}
 		
-
+		
 		public ObservableList<XYChart.Series<String, Number>> loadDist1(){
 			List<XYChart.Series<String, Number>> list = new ArrayList<XYChart.Series<String,Number>>();
 		

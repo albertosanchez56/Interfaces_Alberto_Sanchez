@@ -121,3 +121,6 @@ GridPane {
 RadioButton:selected, .grid-central CheckBox:selected{
 	-fx-background-color: #0DD1D1;
 }
+.chart-vertical-grid-lines {
+    -fx-stroke: darkblue; 
+}

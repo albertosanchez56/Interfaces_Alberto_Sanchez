@@ -270,7 +270,9 @@ public class DatosController {
         //personTable.setItems(this.mainApp.getMapData()); 
     }
     
-    
+    /**
+     * Metodo para mostrar los detalles de la persona en los labels
+     * */
     private void showPersonDetails(Persona person) {
         if (person != null) {
         	// Si el campo contiene datos, entonces se rellena la información
@@ -290,6 +292,9 @@ public class DatosController {
             
         }
     }
+    /**
+     * Metodo para mostrar los detalles de los productos en los labels
+     * */
     private void showProductosDetails(Productos produc) {
     	
     	if(produc!=null) {
