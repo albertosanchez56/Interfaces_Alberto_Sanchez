@@ -51,7 +51,7 @@ TableView .column-header .label{
 	-fx-alignment: center;
 }
 Button{
-	-fx-padding: 5;
+	-fx-padding: 3 6 6 6;
 	
 }
 
@@ -61,6 +61,7 @@ GridPane {
     -fx-padding: 10;
     -fx-spacing: 8;
     -fx-border-insets: 12 12 4 12;
+    -fx-border-radius: 20 20 20 20;
 }
 
 .chart-horizontal-grid-lines {
@@ -72,8 +73,12 @@ GridPane {
 }
 
 #AnchorIzquieda{
+	-fx-background-image: url("../img/mando2.png");
+	-fx-background-position: top-left;
+	-fx-background-size: 80;
+	-fx-background-repeat: no-repeat;
 	-fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #383939, #B8C9CB);
-}
+	}
 
 .tree-cell:expanded{
 	-fx-font-weight: bold;
@@ -98,12 +103,20 @@ GridPane {
 	 -fx-mark-color: #0DD1D1;
 }
 
-.choice-box .context-menu { -fx-background-color: black; }
+.choice-box .context-menu { 
+	-fx-background-color: black;
+}
 
-.choice-box .menu-item:focused { -fx-background-color: #0DD1D1; }
-.choice-box .menu-item > .label { -fx-text-fill: white; }
+.choice-box .menu-item:focused { 
+	-fx-background-color: #0DD1D1;
+}
+.choice-box .menu-item > .label { 
+	-fx-text-fill: white;
+}
 
-.choice-box .menu-item:focused > .label { -fx-text-fill: black; }
+.choice-box .menu-item:focused > .label { 
+	-fx-text-fill: black;
+}
 
 RadioButton:selected, .grid-central CheckBox:selected{
 	-fx-background-color: #0DD1D1;
