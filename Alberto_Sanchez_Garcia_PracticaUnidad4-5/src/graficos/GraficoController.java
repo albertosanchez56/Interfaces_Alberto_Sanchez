@@ -73,7 +73,7 @@ public class GraficoController {
     	    		}
     	    	}
     		
-    			
+    		/**Metodo para inicializar los datos en el ScatterChart*/	
     	 public void initScatterChart() {
     		 scatterChart.setData(this.scatter);
     	    }

@@ -45,6 +45,7 @@ public class PersonEditDialogController {
 	    private void initialize() {
 	    	
 	    }
+	    /**Metodo para recoger los datos de la persona*/
 	    public void setPerson(Persona person) {
 	        this.person = person;
 

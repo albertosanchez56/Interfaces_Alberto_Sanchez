@@ -116,6 +116,7 @@ public class Main extends Application {
 		    }
 		}
 		/**
+		 * 
 		 * @param product Objeto para mostrar los datos del producto seleccionada
 		 * Abre un nuevo dialogo para editar los productos*/
 		public boolean showProductEditDialog(Productos product) {
@@ -148,7 +149,9 @@ public class Main extends Application {
 		    }
 		}
 		
-		/**Añade los datos al PieChart*/
+		/**
+		 * @return Devuelve los datos en una lista
+		 * Añade los datos al PieChart*/
 		public ObservableList<PieChart.Data> loadPieData(){
 			listapro=new ArrayList<>();
 			listapro.addAll(getProductosData());
@@ -167,7 +170,11 @@ public class Main extends Application {
 			return pieChartData;
 		}
 		
-		
+		/**
+		 * 
+		 * @return Devuelve los datos en una lista
+		 * Metodo para guardar los datos para el ScatterChart
+		 * */
 		public ObservableList<XYChart.Series<String, Number>> loadDist1(){
 			List<XYChart.Series<String, Number>> list = new ArrayList<XYChart.Series<String,Number>>();
 		
@@ -238,6 +245,10 @@ public class Main extends Application {
 
 			return FXCollections.observableArrayList(list);
 		}
+		
+		/**
+		 * @return Devuelve los datos en una lista
+		 * Metodo para guardar los datos del StackBarChart*/
 		public ObservableList<XYChart.Series<String, Integer>> loadStackBarchart(){
 			List<XYChart.Series<String, Integer>> list = new ArrayList<XYChart.Series<String,Integer>>();
 		
