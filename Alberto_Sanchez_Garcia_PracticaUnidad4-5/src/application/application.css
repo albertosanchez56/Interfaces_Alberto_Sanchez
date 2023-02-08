@@ -29,7 +29,9 @@
 .chart-pie-label {
     -fx-fill: white;
 } 
-
+TableView{
+	-fx-font-style: italic;
+}
 TableView .table-row-cell:even:selected{
 	-fx-background-color: #5EF6D3;
 	-fx-opacity: 0.5;
@@ -50,6 +52,7 @@ TableView .column-header .label{
 }
 Button{
 	-fx-padding: 5;
+	
 }
 
 GridPane {
@@ -58,6 +61,14 @@ GridPane {
     -fx-padding: 10;
     -fx-spacing: 8;
     -fx-border-insets: 12 12 4 12;
+}
+
+.chart-horizontal-grid-lines {
+    -fx-stroke: #0DD1D1;
+}
+.default-color0.chart-symbol { 
+	-fx-background-color: purple;
+	-fx-opacity: 0.3;
 }
 
 #AnchorIzquieda{
@@ -69,5 +80,14 @@ GridPane {
 }
 
 .button{
+	-fx-background-color: #0DD1D1;
+	
+}
+
+
+.check-box:selected {
+    -fx-color: #0DD1D1;
+}
+RadioButton:selected, .grid-central CheckBox:selected{
 	-fx-background-color: #0DD1D1;
 }
