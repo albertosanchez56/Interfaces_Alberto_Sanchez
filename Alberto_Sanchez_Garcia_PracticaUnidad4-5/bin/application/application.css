@@ -83,13 +83,28 @@ GridPane {
 	-fx-background-color: #0DD1D1;
 	
 }
-.button:visited{
-	-fx-background-color: black;
+.grid-central .location{ /* Para alinear ChoiceBox y ComboBox */
+	-fx-alignment: center;
 }
 
 .check-box:selected {
     -fx-color: #0DD1D1;
 }
+.combo-box .list-cell{
+	-fx-background: #0DD1D1;
+}
+.choice-box{
+	 -fx-background-color: black;
+	 -fx-mark-color: #0DD1D1;
+}
+
+.choice-box .context-menu { -fx-background-color: black; }
+
+.choice-box .menu-item:focused { -fx-background-color: #0DD1D1; }
+.choice-box .menu-item > .label { -fx-text-fill: white; }
+
+.choice-box .menu-item:focused > .label { -fx-text-fill: black; }
+
 RadioButton:selected, .grid-central CheckBox:selected{
 	-fx-background-color: #0DD1D1;
 }
